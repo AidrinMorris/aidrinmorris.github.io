@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" consent="width=device-width, initial-scale=1.0" />
-    <title>About Aidrin Morris</title>
 </head>
 <body>
     <h1>CIS155 Aidrin Morris</h1>
