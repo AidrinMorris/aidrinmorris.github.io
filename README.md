@@ -11,6 +11,7 @@
     <li>I'm newer to coding.</li>
     <li>I like collecting old things.</li>
     <li>I build computers.</li>
+    <li>I'm write my own stories.</li>
     </ul>
 </body>
 </html>
