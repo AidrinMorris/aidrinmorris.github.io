@@ -1,83 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Aidrin Morris's Website</title>
-    <!-- Page color and background elements -->
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: forestgreen;
-        }
-        header {
-            background-color: rgb(59, 57, 57);
-            padding: 1.25rem;
-            text-align: center;
-            color: white;
-            margin-bottom: 1.875rem;
-        }
-        header h1 {
-            font-weight: bold;
-        }
-        .main-content {
-            background-color: green;
-            padding: 2.5rem;
-            max-width: 50rem;
-            margin: 0 auto;
-            flex: 1;
-        }
-        p {
-            font-size: 1.0625rem;
-            text-indent: 3.125rem;
-            font-weight: normal;
-            line-height: 1.5;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 1.25rem;
-            margin-bottom: 1.25rem;
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-            border: 0.25rem solid black;
-            border-radius: 0.625rem;
-            width: 20em;
-        }
-        footer {
-            background-color: rgb(59, 57, 57);
-            color: white;
-            text-align: center;
-            padding: 0.625rem;
-        }
-    </style>
+<meta charset="UTF-8" />
+<title>Aidrin Morris's Website</title>
+<!-- Page color and background elements -->
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: rgb(214, 238, 0);
+    }
+    header {
+        background-color: rgb(255, 0, 221);
+        padding: 1.25rem;
+        text-align: center;
+        color: white;
+        margin-bottom: 1.875rem;
+        margin-top: 2rem;
+        border: 3px dashed white;
+    }
+    header h1 {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    .main-content {
+        background: linear-gradient(135deg, #00ff37, #1dff09);
+        padding: 2.5rem;
+        max-width: 50rem;
+        margin: 0 auto;
+        flex: 1;
+        border: 5px dotted red;
+        margin-bottom: 2rem;
+    }
+    p {
+        font-size: 1.0625rem;
+        text-indent: 3.125rem;
+        font-weight: normal;
+        line-height: 1.5;
+        padding: 1rem 2rem;
+        background: rgba(255,255,255,0.2);
+    }
+    ul {
+        list-style-type: disc;
+        padding-left: 1.25rem;
+        margin-bottom: 1.25rem;
+        margin-top: 2rem;
+        border: 2px dashed blue;
+        padding: 1rem;
+        background: rgba(0,0,0,0.1);
+    }
+    li {
+        margin-bottom: 0.5rem;
+        border-radius: 1rem;
+        border: 2px dashed yellow;
+        padding: 0.5rem;
+    }
+    img {
+        display: block;
+        margin: 1rem auto;
+        border: 0.25rem dashed purple;
+        border-radius: 0.625rem;
+        width: 20em;
+        background: repeating-linear-gradient(45deg, #ffe0b2, #ffe0b2 10px, #ffe0b2 20px, #ffe0b2 30px);
+        margin-top: 3rem;
+    }
+    footer {
+        background-color: rgb(59, 57, 57);
+        color: white;
+        text-align: center;
+        padding: 0.625rem;
+        margin-top: 2rem;
+        border-top: 3px dotted white;
+    }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Who is Aidrin Morris?</h1>
-    </header>
-    <div class="main-content">
-        <!-- Main content section -->
-        <p>My name is Aidrin Morris, I'm working towards becoming a tech support specialist. I've kind of fallen off the technical train and have been thinking of switching up to something different, but am currently torn on what. I've been doing online school as I live in the middle of nowhere and the nearest campus is over two hours away.</p>
-        <ul>
-            <li>A picture of me:</li>
-        </ul>
-        <!-- Picture of Aidrin Morris -->
-        <img src="Screenshot 2025-08-19 114040.png" alt="A picture of Aidrin Morris">
-        <h2>Some of my hobbies:</h2>
-        <ul>
-            <li>I collect old things, either by metal detecting or antiquing.</li>
-            <li>I build my own computers, I have built three so far.</li>
-            <li>I love the creative arts. I make music, write my own stories, and paint/draw.</li>
-        </ul>
-    </div>
-    <!-- Add footer below main content -->
-    <footer>
-        <p>&copy; 2025 Aidrin Morris</p>
-    </footer>
+<header>
+    <h1>Who is Aidrin Morris?</h1>
+</header>
+<div class="main-content">
+    <!-- Main content -->
+    <p>My name is Aidrin Morris, I'm working towards becoming a tech support specialist. I've kind of fallen off the technical train and have been thinking of switching up to something different, but am currently torn on what. I've been doing online school as I live in the middle of nowhere and the nearest campus is over two hours away.</p>
+    <ul>
+        <li>A picture of me:</li>
+    </ul>
+    <!-- Picture -->
+    <img src="Screenshot 2025-08-19 114040.png" alt="A picture of Aidrin Morris" />
+    <h2>Some of my hobbies:</h2>
+    <ul>
+        <li>I collect old things, either by metal detecting or antiquing.</li>
+        <li>I build my own computers, I have built three so far.</li>
+        <li>I love the creative arts. I make music, write my own stories, and paint/draw.</li>
+    </ul>
+</div>
+
+<!-- Navigation to next page -->
+<div style="text-align: center; margin-top: 20px;">
+  <a href="nextpage.html" style="font-size: 1.2em; text-decoration: none; padding: 10px 20px; background-color: #444; color: #fff; border-radius: 5px;">Next Page</a>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Aidrin Morris</p>
+</footer>
 </body>
 </html>
