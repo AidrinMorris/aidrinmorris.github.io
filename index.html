@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8" />
 <title>Aidrin Morris's Website</title>
-<!-- Page color and background elements -->
 <style>
     body {
         display: flex;
@@ -24,23 +23,26 @@
         font-weight: bold;
     }
     .main-content {
-        background-color: green;
-        padding: 2.5rem;
         max-width: 50rem;
         margin: 0 auto;
-        flex: 1;
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #2E7D32; /* Dark green background behind all content */
+        border-radius: 0.5rem;
     }
-    p {
-        font-size: 1.0625rem;
-        text-indent: 3.125rem;
-        font-weight: normal;
+    /* Style for all description boxes */
+    .description-box {
+        background-color: #666; /* Darker gray for boxes */
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: 2px solid #808080;
+        font-size: 1rem;
         line-height: 1.5;
+        color: #f0f0f0;
     }
-    ul {
-        list-style-type: disc;
-        padding-left: 1.25rem;
-        margin-bottom: 1.25rem;
-    }
+    /* Image styling */
     img {
         display: block;
         margin: 0 auto;
@@ -48,54 +50,70 @@
         border-radius: 0.625rem;
         width: 20em;
     }
+    /* Footer styling */
     footer {
         background-color: rgb(59, 57, 57);
         color: white;
         text-align: center;
         padding: 0.625rem;
     }
-    /* Container for the button to control its width and centering */
-    .button-container {
-        max-width: 50rem;
-        margin: 2rem auto 0 auto; /* Top margin and center horizontally */
-        text-align: center;
+    /* Navigation menu styles at bottom */
+    nav {
+        background-color: rgb(59, 57, 57);
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
     }
-    /* Style for the button link */
-    .next-page-btn {
-        font-size: 1.2em;
+    nav a {
+        color: white;
         text-decoration: none;
-        padding: 10px 20px;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
         background-color: #404040;
-        color: #f0f0f0;
-        border-radius: 5px;
-        display: inline-block;
+        transition: background-color 0.3s;
+        border: 2px solid #222;
+    }
+    nav a:hover {
+        background-color: #606060;
     }
 </style>
 </head>
 <body>
+
 <header>
     <h1>Who is Aidrin Morris?</h1>
 </header>
+
 <div class="main-content">
-    <!-- Main content section -->
-    <p>My name is Aidrin Morris, I'm working towards becoming a tech support specialist. I've kind of fallen off the technical train and have been thinking of switching up to something different, but am currently torn on what. I've been doing online school as I live in the middle of nowhere and the nearest campus is over two hours away.</p>
-    <ul>
-        <li>A picture of me:</li>
-    </ul>
+    <div class="description-box">
+        <p>My name is Aidrin Morris, I'm working towards becoming a tech support specialist. I've kind of fallen off the technical train and have been thinking of switching up to something different, but am currently torn on what. I've been doing online school as I live in the middle of nowhere and the nearest campus is over two hours away.</p>
+    </div>
     <!-- Picture of Aidrin Morris -->
     <img src="Screenshot 2025-08-19 114040.png" alt="A picture of Aidrin Morris" />
-    <h2>Some of my hobbies:</h2>
-    <ul>
-        <li>I collect old things, either by metal detecting or antiquing.</li>
-        <li>I build my own computers, I have built three so far.</li>
-        <li>I love the creative arts. I make music, write my own stories, and paint/draw.</li>
-    </ul>
+    <div class="description-box">
+        <h2>Things I like to do:</h2>
+        <p>I love the creative arts. I make music, write my own stories, and paint/draw.</p>
+        <p>I collect old things, either by metal detecting or antiquing.</p>
+        <p>I build my own computers, I have built three so far.</p>
+        <p>I like to watch and read anime/manga in my free time. Some of my favorite anime/manga are Knights of Sidonia, Neon Genesis Evangelion, and Ghost in the Shell.</p>
+        <p>I enjoy playing Magic: The Gathering and Dungeons & Dragons with my friends. The high school I go to has game nights on Monday, which I attend regularly.</p>
+        <p>I love driving and working on cars. If Washington gas prices weren't so high, I would drive more often.</p>
+    </div>
+    <!-- New box below "Things I like to do" -->
+    <div class="description-box">
+        <p>The next page I will focus on my favorite anime/manga, as I have been really into these lately.</p>
+    </div>
 </div>
-<!-- Button container -->
-<div class="button-container">
-    <a href="nextpage.html" class="next-page-btn">Next Page</a>
-</div>
-<!-- Add footer below main content -->
+
+<!-- Navigation menu at bottom -->
+<nav>
+    <a href="nextpage.html">Page 2</a>
+    <a href="nextpage2.html">Page 3</a>
+</nav>
+
+<!-- Footer -->
 <footer>
     <p>&copy; 2025 Aidrin Morris</p>
 </footer>
