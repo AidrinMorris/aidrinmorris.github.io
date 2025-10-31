@@ -2,212 +2,191 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Aidrin Morris - Second Page</title>
+<title>Aidrin Morris - Page 2</title>
 <style>
-  body {
-    display: flex; 
-    flex-direction: column; 
-    min-height: 100vh; 
-    margin: 0;
-    font-family: 'Courier New', monospace; 
-    background-color: #404040;
-  }
+/* Basic layout styles for responsiveness and fluidity */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background-color: #404040;
+}
 
-  /* Style for the top button */
-  .top-button {
-    margin: 1rem;
-    display: inline-block;
-    background: #404040;
-    color: #f0f0f0;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-align: center;
-    text-decoration: none;
-  }
+/* Navigation menu styling - horizontal across all pages */
+nav {
+  background-color: rgb(59, 57, 57);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+nav a:hover {
+  background-color: #606060;
+}
+nav a.current {
+  border-color: #fff;
+  background-color: #808080;
+}
 
-  /* Rest of your styles remain the same */
-  .content {
-    flex: 1; 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 1rem; 
-    padding: 2rem;
-  }
+/* Style for the link button that navigates to the placeholder */
+.go-to-placeholder {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  background-color: #404040;
+  color: #f0f0f0;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #222;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.go-to-placeholder:hover {
+  background-color: #606060;
+}
 
-  section {
-    padding: 1rem; 
-    background: #2E7D32; 
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  }
+/* Main content container, fluid width with max-width for readability */
+.content {
+  flex: 1;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-  h2 {
-    margin-top: 0; 
-    color: #a0a0a0; 
-    text-align: center; 
-    text-decoration: underline;
-  }
+/* Sections styling with background and rounded corners */
+section {
+  padding: 1rem;
+  background: #2E7D32;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 
-  p {
-    font-size: 1rem; 
-    line-height: 1.4; 
-    margin-bottom: 1rem; 
-    padding: 0.5rem;
-    background: rgba(128,128,128,0.2); 
-    border-radius: 0.3rem; 
-    color: #222;
-  }
+/* Headings styling */
+h2 {
+  margin-top: 0;
+  color: #a0a0a0;
+  text-align: center;
+  text-decoration: underline;
+}
 
-  /* Larger description boxes */
-  .description-box {
-    background: #666; 
-    padding: 0.5rem 1rem; 
-    margin-bottom: 1rem;
-    border-radius: 0.5rem; 
-    border: 2px solid #808080;
-    font-size: 0.9rem; 
-    line-height: 1.3; 
-    color: #f0f0f0;
-    max-width: 40em; /* wider for more text */
-  }
+/* Paragraph styling */
+p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: rgba(128, 128, 128, 0.2);
+  border-radius: 0.3rem;
+  color: #222;
+}
 
-  /* Style for images inside description boxes (like title) */
-  .description-box img {
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto;
-    border: 0.25rem solid black; 
-    border-radius: 0.625rem;
-  }
+/* Large description boxes, responsive and fluid */
+.description-box {
+  background: #666;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #808080;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: #f0f0f0;
+  max-width: 40em;
+}
 
-  /* Gauna images container: flex layout for images */
-  .images-row {
-    display: flex; 
-    gap: 0.5rem; 
-    flex-wrap: wrap; 
-    justify-content: center;
-  }
-
-  /* Gauna images: rounded corners only, no boxes, max size 20rem */
-  .gauna-img {
-    max-width: 20rem;
-    max-height: 20rem;
-    object-fit: contain;
-    border-radius: 0.5em; /* rounded corners */
-    display: block;
-    margin: 0.25em;
-  }
-
-  /* Enlarged "KoS" image on the left side of the layout */
-  .left-kos-img {
-    width: 80em;
-  }
-
-  /* Container for the "other favorites" with images in a box */
-  .favorites-box {
-    background: #666; 
-    padding: 0.5rem; 
-    border-radius: 0.5rem; 
-    border: 2px solid #808080; 
-    max-width: 20em;
-  }
-
-  /* Style for the images inside the favorites box */
-  .favorites-box img {
-    width: 150px; /* or any preferred size */
-    display: block;
-    margin-bottom: 1rem;
-  }
-
-  /* Container for the NGE and GitS images next to the text */
-  .favorites-container {
-    display: flex; 
-    align-items: flex-start; 
-    gap: 1rem;
-  }
-
-  /* Navigation styles */
-  nav {
-    background: rgb(59,57,57); 
-    padding: 1rem; 
-    display: flex; 
-    justify-content: center; 
-    gap: 1rem;
-  }
-
-  nav a {
-    color: #fff; 
-    text-decoration: none; 
-    font-weight: bold; 
-    padding: 0.5rem 1rem; 
-    border-radius: 4px;
-    background: #404040; 
-    border: 2px solid #222; 
-    transition: background 0.3s;
-  }
-
-  nav a:hover {
-    background: #606060;
-  }
+/* Style for images inside description boxes or content, scalable */
+.description-box img,
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 0.25rem solid black;
+  border-radius: 0.625rem;
+}
 </style>
 </head>
 <body>
 
-<!-- Moved the button to the top -->
-<a href="#placeholder" class="top-button">Go to Placeholder</a>
+<!-- Navigation menu -->
+<nav>
+  <a href="index.html">Page 1</a>
+  <a href="nextpage.html" class="current">Page 2</a>
+  <a href="nextpage2.html">Page 3</a>
+</nav>
 
+<!-- Button linking to placeholder section at bottom -->
+<a href="#placeholder" class="go-to-placeholder">Go to Placeholder</a>
+
+<!-- Content area -->
 <div class="content">
-  <!-- KoS image -->
-  <div class="description-box image-box" style="max-width:100em; margin:auto;">
-    <img src="KoS.png" alt="Knights of Sidonia Title" class="left-kos-img" />
-  </div>
-  
-  <!-- Middle: Description -->
-  <div class="description-box" style="max-width:40em;">
-    <p>My favorite manga/anime is Knights of Sidonia. Knights of Sidonia is a fictional story set over a thousand years later in space. Earth was destroyed by an alien race called the Gauna. Ships called "humanity seed ships" escaped as the Gauna invaded. The two main seedships that are mentioned in the story are seedship Sidonia and Aposimz, Sidonia being where the manga and anime take place.</p>
-    <p>Here are some screenshots of what the Gauna look like. The Gauna absorb organic matter to grow stronger and adapt. If they absorb a human, they will take on its appearance.</p>
-    <p>Learn more about the Gauna on the <a href="https://sidonia-no-kishi.fandom.com/wiki/Gauna" target="_blank" rel="noopener noreferrer">KoS Wiki</a>.</p>
-  </div>
-  
-  <!-- Gauna images: no boxes, just rounded images -->
-  <div style="display:flex; flex-direction:column; gap:1rem;">
-    <section style="background:#2E7D32; padding:1rem; border-radius:0.5rem;">
-      <h2>The Gauna</h2>
-      <div class="images-row">
-        <img src="Screenshot 2025-10-24 170135.png" alt="Creepy Screenshot 1" class="gauna-img" />
-        <img src="Screenshot 2025-10-24 170314.png" alt="Creepy Screenshot 2" class="gauna-img" />
-        <img src="Screenshot 2025-10-24 170406.png" alt="Creepy Screenshot 3" class="gauna-img" />
-        <img src="Screenshot 2025-10-24 170535.png" alt="Creepy Screenshot 4" class="gauna-img" />
-      </div>
-    </section>
-  </div>
-  
-  <!-- "Other favorites" with images in a styled box next to text -->
-  <div style="margin-top: 1rem;">
-    <div class="favorites-container">
-      <!-- Text paragraph -->
-      <p style="flex: 1;">
-        My other favorite anime/manga are <strong>Neon Genesis Evangelion</strong> and <strong>Ghost in the Shell</strong>. These are also some of my top favorites because of their complex stories, deep themes, and impactful characters. I actually make custom <strong>Magic: The Gathering</strong> cards and <strong>D&D</strong> characters on these anime/manga.
-      </p>
+
+  <!-- Section: Favorite manga/anime with images -->
+  <section>
+    <h2>My Favorite Manga/Anime</h2>
+    <p>
+      My favorite manga/anime is <strong>Knights of Sidonia</strong>. It is a fictional story set over a thousand years later in space, where Earth was destroyed by aliens called Gauna.
+    </p>
+    <p>
+      Here are some screenshots of what the Gauna look like. They absorb organic matter to grow stronger and adapt.
+    </p>
+    <p>
+      Learn more about the Gauna on the <a href="https://sidonia-no-kishi.fandom.com/wiki/Gauna" target="_blank" rel="noopener noreferrer">KoS Wiki</a>.
+    </p>
+    <img src="KoS.png" alt="Knights of Sidonia" style="max-width: 100%; height: auto; margin-top: 1rem;">
+  </section>
+
+  <!-- Section: Gauna images -->
+  <section>
+    <h2>The Gauna</h2>
+    <div class="images-row">
+      <img src="Screenshot 2025-10-24 170135.png" alt="Gauna Image 1" />
+      <img src="Screenshot 2025-10-24 170314.png" alt="Gauna Image 2" />
+      <img src="Screenshot 2025-10-24 170406.png" alt="Gauna Image 3" />
+      <img src="Screenshot 2025-10-24 170535.png" alt="Gauna Image 4" />
+    </div>
+  </section>
+
+  <!-- Section: Other favorites -->
+  <section>
+    <h2>Other Favorites</h2>
+    <p>
+      My other favorite anime/manga are <strong>Neon Genesis Evangelion</strong> and <strong>Ghost in the Shell</strong>. These have complex stories, deep themes, and impactful characters. I actually make custom <strong>Magic: The Gathering</strong> cards around these anime/manga. I also make <strong>D&D</strong> characters based around them too.
+    </p>
+    <div class="favorites-container" style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
       <div class="favorites-box">
         <img src="NGE.png" alt="Neon Genesis Evangelion" />
+      </div>
+      <div class="favorites-box">
         <img src="GitS.png" alt="Ghost in the Shell" />
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Placeholder section to link to on same page -->
+  <section id="placeholder" style="margin-top:2rem; padding:1rem; background:#555; border-radius:0.5rem;">
+    <h2>Placeholder</h2>
+    <p>This is a placeholder section.</p>
+  </section>
 </div>
 
-<section id="placeholder" style="margin-top:2rem; padding:1rem; background:#555; border-radius:0.5rem;">
-  <h2>Placeholder</h2>
-  <p>Placeholder.</p>
-</section>
-<nav>
-  <a href="index.html">Page 1</a>
-  <a href="nextpage2.html">Page 3</a>
-</nav>
-<footer>
-  <p>&copy; 2025 Aidrin Morris</p>
-</footer>
 </body>
 </html>
