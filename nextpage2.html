@@ -4,7 +4,6 @@
 <meta charset="UTF-8" />
 <title>Aidrin Morris - Page 3</title>
 <style>
-/* Basic layout styles */
 body {
   display: flex;
   flex-direction: column;
@@ -13,8 +12,6 @@ body {
   font-family: 'Courier New', monospace;
   background-color: #404040;
 }
-
-/* Navigation bar styling */
 nav {
   background-color: rgb(59, 57, 57);
   padding: 1rem;
@@ -24,8 +21,6 @@ nav {
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
-
-/* Style for navigation links */
 nav a {
   color: #fff;
   text-decoration: none;
@@ -35,88 +30,82 @@ nav a {
   border: 2px solid transparent;
   transition: background-color 0.3s, border-color 0.3s;
 }
-
-/* Hover effect for links */
 nav a:hover {
   background-color: #606060;
 }
-
-/* Style for the current page link */
 nav a.current {
   border-color: #fff;
   background-color: #808080;
 }
-
-/* Content container with fluid width */
-.content {
-  flex: 1;
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 2rem;
+.side-by-side {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
 }
-
-/* Placeholder box styling */
-.construction-box {
-  border: 4px dashed #ff0000;
+/* Common style for all boxes for consistency */
+.text-box {
+  background-color: #666;
   padding: 2rem;
   border-radius: 10px;
-  background-color: #666;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Headings in the page */
-h1 {
-  font-size: 2em;
-  margin-bottom: 1rem;
-}
-
-/* Paragraph styling */
-p {
+  border: 2px solid #808080;
   font-size: 1.2em;
-  text-align: center;
-}
-
-.next-page-btn {
-  font-size: 1.2em;
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: #404040;
+  line-height: 1.5;
   color: #f0f0f0;
-  border-radius: 8px;
-  border: 2px solid #222;
-  display: inline-block;
-  margin-top: 1rem;
+  max-width: 600px;
+  flex: 1;
+  min-width: 300px;
+  box-sizing: border-box;
 }
-
-/* Responsive image styles for scalability */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 0.25rem solid black;
-  border-radius: 0.625rem;
+/* Style for the "additional info" box to match the others */
+.additional-box {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 2rem;
+}
+h1 {
+  font-size: 1em;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+p {
+  margin: 0 0 1rem 0;
 }
 </style>
 </head>
 <body>
-
-<!-- Navigation menu with current page highlighted -->
 <nav>
-  <a href="index.html">Page 1</a>
-  <a href="nextpage.html">Page 2</a>
-  <a href="#" class="current">Page 3</a>
+  <a href="index.html">Intro</a>
+  <a href="nextpage.html">Manga/Anime</a>
+  <a href="#" class="current">MTG and D&D</a>
 </nav>
 
-<!-- Main content: under construction message -->
-<div class="construction-box">
-  <h1>Page Under Construction</h1>
-  <p>This page is currently being built. Please check back later!</p>
+<!-- Container for the two side-by-side boxes -->
+<div class="side-by-side">
+  <div class="text-box" style="width: 100%; max-width: 600px;">
+    <h1>Magic: The Gathering and D&D</h1>
+    <p>I've played D&D for a long time, but I'm newer to MTG. I started playing D&D around six years ago and MTG a little under a year and a half ago. A couple of my lower classmate friends graduated this year and have since moved away for college reasons. So it's just me and three other friends. I do still keep in touch with the people who have moved away. Our remaining group hasn't bothered to start up another campaign because of conflicting times, so we can only really play MTG as it's a more mobile game.</p>
+    <p>With D&D out of the question for our group, MTG is the only choice we have. One of my friends in the group doesn't play MTG, so he doesn't join us when we play.</p>
+    <p>MTG is one of the games that is confusing and keeps getting more confusing as time goes on, and as more cards are added. The easiest format for beginners is “Standard.” I personally play Commander, but I know how to play Standard. Commander is one of the more difficult formats to learn. It could take up to a month to learn Commander, but only around an hour to learn Standard. I learned Commander really quickly; it took me a couple of days, but I wouldn't call myself a prodigy.</p>
+    <p>If you want more information on the formats you can go to the official <strong>Wizards of the Coast</strong> website.</p>
+    <p>Website Link: <a href="https://magic.wizards.com/en/formats" target="_blank" rel="noopener noreferrer">Wizards of the Coast format information</a></p>
+  </div>
+  <!-- Second box stays to the right -->
+  <div class="text-box" style="width: 100%; max-width: 600px;">
+    <h1>My favorite D&D character</h1>
+    <p>I have lots of D&D characters so I will just pick out my favorite character.</p>
+    <p>My favorite D&D character is named Apharachath. Apharachath is a fallen angel who fell from grace because she went against the god she was serving under.</p>
+    <p>Falling into the mortal realm after being cast out, she was found outside a large coastal city and eventually nursed back to health. She just looks like a “normal” human. She's a fighter class, and she joins the other players, and they go about their journey.</p>
+    <p>As the story progressed, eventually a powerful demon sees an opportunity for his gain. Apharachath, with the party she is in, eventually finds a way to get to the realm of the gods. Apharachath has had a deep-growing resentment, and that powerful demon catches wind about a fallen angel potentially being able to return to the realm of the gods and said fallen angel holding a grudge against the gods. The demon goes to her and brings her to his realm while the rest of the party slept. They work out a deal that sounded good to Apharachath, and she is sent back to the mortal realm. Apharachath doesn't tell the party what she did, but they soon see new powers coming from Apharachath. She has become a Bloodhunter class. The demon replaced all the levels in the Fighter class with Bloodhunter.</p>
+    <p>The story was cut short due to timing issues and graduations, so I never got to see the end of Apharachath, but I'm planning on writing out her entire story eventually.</p>
+  </div>
+</div>
+
+<div class="text-box">
+  <h1>Additional Information</h1>
+  <p>This is the new box placed directly below the first box. It stays beneath the "Magic: The Gathering and D&D" box, and matches the style of the other boxes.</p>
 </div>
 
 </body>
