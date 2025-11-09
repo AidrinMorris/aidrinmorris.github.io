@@ -4,5 +4,87 @@
 <meta charset="UTF-8" />
 <title>Aidrin Morris - Page 3</title>
 <style>
-    
+    body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background-color: #404040;
+  }
+  nav {
+    background-color: rgb(59, 57, 57);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  nav a:hover {
+    background-color: #606060;
+  }
+  nav a.current {
+    border-color: #fff;
+    background-color: #808080;
+  }
+  .side-by-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  .text-box {
+    background-color: #666;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #808080;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #f0f0f0;
+    max-width: 600px;
+    flex: 1;
+    min-width: 300px;
+    box-sizing: border-box;
+      }
+  
+      footer {
+    background-color: rgb(59, 57, 57);
+    color: white;
+    text-align: center;
+    padding: 0.625rem;
+    margin-top: 1rem;
+  }
 </style>
+</head>
+<body>
+    <nav>
+    <a href="index.html">Intro</a>
+    <a href="nextpage.html">Manga/Anime</a>
+    <a href="nextpage2.html">MTG and D&D</a>
+    <a href="nextpage3.html" class="current">Antiques</a>
+    <a href="nextpage4.html">Music</a>
+  </nav>
+  <div class="side-by-side">
+    <div class="text-box" style="width: 100%; max-width: 600px; background-color: #2E7D32">
+        <h1>What do I Collect?</h1>
+        <p>I love collecting old things, new things, anythings! I don't have a set list of things I collect. It could be car parts, art, books, clothes, games, and the list goes on. (I even have demo songs from multiple different artists that weren't released.) Might be a little bit of a hoarder, but I don't collect trash at least.</p>
+        <p>Some of my favorite things in my miscellaneous collection have got to be either my old car parts or my "scrap." (It's not really scrap, I just don't know what to class it under.)</p>
+    </div>
+  </div>
+    <footer>
+    <p>&copy; 2025 Aidrin Morris</p>
+  </footer>
+</body>
+</html>

@@ -42,7 +42,7 @@ nav a.current {
 }
 
 /* Style for the link button that navigates to the bottom of the page */
-.go-to-placeholder {
+.go-to-bottom {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   margin: 0 auto;
@@ -57,7 +57,7 @@ nav a.current {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.go-to-placeholder:hover {
+.go-to-bottom:hover {
   background-color: #606060;
 }
 
@@ -83,9 +83,8 @@ section {
 /* Headings styling */
 h2 {
   margin-top: 0;
-  color: #a0a0a0;
+  color: #ffffff;
   text-align: center;
-  text-decoration: underline;
 }
 
 /* Paragraph styling */
@@ -138,10 +137,12 @@ footer p {
   <a href="index.html">Intro</a>
   <a href="nextpage.html" class="current">Manga/Anime</a>
   <a href="nextpage2.html">MTG and D&D</a>
+  <a href="nextpage3.html">Antiques</a>
+  <a href="nextpage4.html">Music</a>
 </nav>
 
 <!-- Button linking to placeholder section at bottom -->
-<a href="#placeholder" class="go-to-placeholder">Go to bottom of page</a>
+<a href="#bottom" class="go-to-bottom">Go to bottom of page</a>
 
 <!-- Content area -->
 <div class="content">
@@ -176,7 +177,7 @@ footer p {
   <section>
     <h2>Other Favorites</h2>
     <p>
-      My other favorite anime/manga are <strong>Neon Genesis Evangelion</strong> and <strong>Ghost in the Shell</strong>. These have complex stories, deep themes, and impactful characters. Neon Genesis Evangelion is hard to follow so you really need to look up some things to understand what's even happening sometimes. I actually make custom <strong>Magic: The Gathering</strong> cards around these anime/manga. I also make <strong>D&D</strong> characters based around them too. I mostly do this when I'm bored.
+      My other favorite anime/manga are <strong>Neon Genesis Evangelion</strong> and <strong>Ghost in the Shell</strong>. These have complex stories, deep themes, and impactful characters. <storng> Neon Genesis Evangelion </storng> is hard to follow so you really need to look up some things to understand what's even happening sometimes. <strong>Ghost in the Shell</strong> is a much watch Anime. The complete manga is really good, but the final book is very hard to follow. I actually make custom <strong>Magic: The Gathering</strong> cards around these anime/manga. I also make <strong>D&D</strong> characters based around them too. I mostly do this when I'm bored.
     </p>
     <div class="favorites-container" style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
       <div class="favorites-box">
@@ -187,7 +188,7 @@ footer p {
       </div>
           </div>
   </section>
-  <section id="placeholder" style="margin-top:2rem; padding:1rem; background:#555; border-radius:0.5rem;">
+  <section id="bottom" style="margin-top:2rem; padding:1rem; background:#555; border-radius:0.5rem;">
   </section>
 </div>
 
