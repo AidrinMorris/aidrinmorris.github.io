@@ -44,23 +44,52 @@ nav a.current {
 /* Style for the link button that navigates to the bottom of the page */
 .go-to-bottom {
   display: inline-block;
+  width: 10rem;
+  height: 2rem;
   padding: 0.75rem 1.5rem;
   margin: 0 auto;
   margin-top: 1rem;
   background-color: #404040;
   color: #f0f0f0;
   font-weight: bold;
-  border-radius: 8px;
-  border: 2px solid #222;
+  border-radius: 0.5rem;
+  border: 0.25rem solid #222;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s;
+  position: fixed;
+  bottom: 6rem;
+  right: 1.25rem;
+  z-index: 1000;
 }
 .go-to-bottom:hover {
   background-color: #606060;
 }
-
+.go-to-top {
+  display: inline-block;
+  width: 10rem;
+  height: 2rem;
+  padding: 0.75rem 1.5rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  background-color: #404040;
+  color: #f0f0f0;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: 0.25rem solid #222;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 1000;
+}
+.go-to-top:hover {
+  background-color: #606060;
+}
 /* Main content container */
 .content {
   flex: 1;
@@ -137,12 +166,13 @@ footer p {
   <a href="index.html">Intro</a>
   <a href="nextpage.html" class="current">Manga/Anime</a>
   <a href="nextpage2.html">MTG and D&D</a>
-  <a href="nextpage3.html">Antiques</a>
+  <a href="nextpage3.html">Collection</a>
   <a href="nextpage4.html">Music</a>
 </nav>
 
-<!-- Button linking to placeholder section at bottom -->
-<a href="#bottom" class="go-to-bottom">Go to bottom of page</a>
+<!-- Button linking to section at bottom of page -->
+<a href="#bottom" class="go-to-bottom">Go to Bottom of Page</a>
+<a href="#top" class="go-to-top">Go to top of Page</a>
 
 <!-- Content area -->
 <div class="content">
@@ -154,7 +184,7 @@ footer p {
       My favorite manga/anime is <strong>Knights of Sidonia</strong>. It is a fictional story set over a thousand years later in deep space, where Earth was destroyed by aliens called Gauna. I read the manga back in middle school, but recently refound the anime. I watched it then decided to get the manga that I read a long time ago.
     </p>
     <p>
-      Here are some screenshots of what the Gauna look like. They absorb organic matter to grow stronger and adapt to situations thrown at them.
+      I'll include some screenshots of what the Gauna look like. They absorb organic matter to grow stronger and adapt to situations thrown at them.
     </p>
     <p>
       Learn more about the Gauna on the <a href="https://sidonia-no-kishi.fandom.com/wiki/Gauna" target="_blank" rel="noopener noreferrer">KoS Wiki</a>.

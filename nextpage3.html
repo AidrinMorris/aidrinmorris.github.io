@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <title>Aidrin Morris - Page 3</title>
 <style>
-    body {
+  body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -26,8 +26,8 @@
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
-    border: 2px solid transparent;
+    border-radius: 0.25rem;
+    border: 0.125rem solid transparent;
     transition: background-color 0.3s, border-color 0.3s;
   }
   nav a:hover {
@@ -46,20 +46,34 @@
     padding: 2rem;
   }
   .text-box {
-    background-color: #666;
+    background-color: #2E7D32;
     padding: 2rem;
-    border-radius: 10px;
-    border: 2px solid #808080;
+    border-radius: 0.625rem;
+    border: 0.125rem solid #808080;
     font-size: 1.2em;
     line-height: 1.5;
     color: #f0f0f0;
-    max-width: 600px;
+    max-width: 40rem;
     flex: 1;
-    min-width: 300px;
+    min-width: 18.75rem;
     box-sizing: border-box;
-      }
-  
-      footer {
+  }
+  .image-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #2E7D32;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  img {
+    max-width: 100%;
+    max-height: 15rem;
+    height: auto;
+    border-radius: 0.625rem;
+  }
+  footer {
     background-color: rgb(59, 57, 57);
     color: white;
     text-align: center;
@@ -69,21 +83,33 @@
 </style>
 </head>
 <body>
-    <nav>
+  <nav>
     <a href="index.html">Intro</a>
     <a href="nextpage.html">Manga/Anime</a>
     <a href="nextpage2.html">MTG and D&D</a>
-    <a href="nextpage3.html" class="current">Antiques</a>
+    <a href="nextpage3.html" class="current">Collection</a>
     <a href="nextpage4.html">Music</a>
   </nav>
   <div class="side-by-side">
-    <div class="text-box" style="width: 100%; max-width: 600px; background-color: #2E7D32">
-        <h1>What do I Collect?</h1>
-        <p>I love collecting old things, new things, anythings! I don't have a set list of things I collect. It could be car parts, art, books, clothes, games, and the list goes on. (I even have demo songs from multiple different artists that weren't released.) Might be a little bit of a hoarder, but I don't collect trash at least.</p>
-        <p>Some of my favorite things in my miscellaneous collection have got to be either my old car parts or my "scrap." (It's not really scrap, I just don't know what to class it under.)</p>
+    <div class="text-box">
+      <h1>What do I Collect?</h1>
+      <p>I love collecting old things, new things, anythings! I don't have a set list of things I collect. It could be car parts, art, books, clothes, games, and the list goes on. (I even have demo songs from multiple different artists that weren't released.) Might be a little bit of a hoarder, but I don't collect trash at least.</p>
+      <p>Some of my favorite things in my miscellaneous collection have got to be either my old car parts or my "scrap." (It's not really scrap, I just don't know what to class it under.) It's bottlecaps and things like that.</p>
     </div>
+      <div class="text-box">
+        <h1>Metal Detecting</h1>
+        <p>I enjoy going out every once in a while to go metal detecting. Metal detecting is where I find most of my cool stuff and is actually where I found those car bits. If you want to metal detect in a state park, you have to fill out forms and talk to the rangers for permission, but once you get past that, it's smooth sailing. Some of my favorite pieces came from my local elementary school. The school was built in the 1800s, and when I went metal detecting there, I found old metal desk parts, silverware, and lead. (Yikes.)</p>
+        <p>It's pretty much a must to wear gloves and get your tetanus shots, as you're dealing with potentially rusty and sharp metal. Also, bringing tools is a must. (Duh.) A shovel, a “wand,” and a place to put your treasures or trash into. These are just the basic tools. (A wand is just a pinpointing tool so you can find the metal easier after you've dug the hole.)</p>
+      </div>
+    </div>
+  <div class="image-row">
+  <img src="WSScreen/CarParts.png" alt="Vehicle Parts" />
+  <img src="WSScreen/AT&T.png" alt="AT&T Helmet" />
+  <img src="WSScreen/MyRecords.png" alt="Record" />
+  <img src="WSScreen/Old1.png" alt="Old1" />
+  <img src="WSScreen/Old2.png" alt="Old2" />
   </div>
-    <footer>
+  <footer>
     <p>&copy; 2025 Aidrin Morris</p>
   </footer>
 </body>
