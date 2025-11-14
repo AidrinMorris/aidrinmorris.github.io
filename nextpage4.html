@@ -12,7 +12,6 @@
     font-family: 'Courier New', monospace;
     background-color: #404040;
     align-items: center;
-    justify-content: center;
   }
   nav {
     background-color: rgb(59, 57, 57);
@@ -28,8 +27,8 @@
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
-    border: 2px solid transparent;
+    border-radius: 0.25rem;
+    border: 0.125rem solid transparent;
     transition: background-color 0.3s, border-color 0.3s;
   }
   nav a:hover {
@@ -39,37 +38,29 @@
     border-color: #fff;
     background-color: #808080;
   }
-  .text-box {
-    background-color: #666;
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 90%;
+    padding: 1rem;
+  }
+  .content-block {
+    background-color: #2E7D32;
     padding: 2rem;
     border-radius: 10px;
-    border: 2px solid #808080;
+    border: 0.125rem solid #808080;
     font-size: 1.2em;
     line-height: 1.5;
     color: #f0f0f0;
-    max-width: 600px;
-    width: 100%;
-    box-sizing: border-box;
   }
-  .fav-mg {
-    background-color: #666;
-    padding: 2rem;
-    border-radius: 10px;
-    border: 2px solid #808080;
-    font-size: 1.2em;
-    line-height: 1.5;
-    color: #f0f0f0;
-    max-width: 600px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-    footer {
+  footer {
     background-color: rgb(59, 57, 57);
     color: white;
     text-align: center;
     padding: 0.625rem;
     margin-top: 1rem;
+    width: 100%;
   }
 </style>
 </head>
@@ -81,17 +72,21 @@
     <a href="nextpage3.html">Collection</a>
     <a href="nextpage4.html" class="current">Music</a>
   </nav>
-  <div class="text-box" style="background-color: #2E7D32;">
-    <h1>What Kind of Music do I listen to?</h1>
-    <p>As I said in the intro, I listen to everything. My favorite genres move around a lot, though; I call them “phases.” The current phase I'm in is the “EBM and Digital Hardcore phase.” The phase before this one was the “Pop and Breakcore phase.”</p>
-    <p>My introduction to music was through my grandpa. He listens to classic rock, so I listened to classic rock. My favorite classic rock artists are Journey, America, The Beatles, and Soundgarden. My music taste then soon shifted because of my mother. She listened to electronic, alternative rock, metal, and EBM. Some of the artists I listened to then were Mr. Kitty, Rammstein, And One, and Apoptygma Berzerk. The music I listen to now is much heavier than what I used to listen to. Artists like Machine Girl, Pixel Grip, ZOMB, awerewa, LustSickPuppy, and multiple others. Machine Girl is definitely my favorite artist right now.</p>
-  </div>
-  <div class="fav-mg" style="background-color: #2E7D32;">
-    <h1>Some of my Favorite Songs</h1>
-    <p>I have lots of favorites, I've been working on a playlist on <strong>Spotify</strong> called "One of Everything." The playlist is a favorite song in every genre I listen to.</p>
+
+  <div class="grid-container">
+    <div class="content-block">
+      <h1>What Kind of Music do I listen to?</h1>
+      <p>As I said in the intro, I listen to everything. My favorite genres move around a lot, though; I call them “phases.” The current phase I'm in is the “EBM and Digital Hardcore phase.” The phase before this one was the “Pop and Breakcore phase.”</p>
+      <p>My introduction to music was through my grandpa. He listens to classic rock, so I listened to classic rock. My favorite classic rock artists are Journey, America, The Beatles, and Soundgarden. My music taste then soon shifted because of my mother. She listened to electronic, alternative rock, metal, and EBM. Some of the artists I listened to then were Mr. Kitty, Rammstein, And One, and Apoptygma Berzerk. The music I listen to now is much heavier than what I used to listen to. Artists like Machine Girl, Pixel Grip, ZOMB, awerewa, LustSickPuppy, and multiple others. Machine Girl is definitely my favorite artist right now.</p>
+    </div>
+    <div class="content-block">
+      <h1>Some of my Favorite Songs</h1>
+      <p>I have lots of favorites, I've been working on a playlist on <strong>Spotify</strong> called "One of Everything." The playlist is a favorite song in every genre I listen to.</p>
+      <p>My current favorite artist is Machine Girl; some of my favorite songs from them: Ignore the Vore, Kill Screen, Necro Culture Vulture, Black Glass, and Come on Baby Scrape my Data.</p>
+    </div>
   </div>
 
-    <footer>
+  <footer>
     <p>&copy; 2025 Aidrin Morris</p>
   </footer>
 </body>
