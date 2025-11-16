@@ -12,6 +12,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: forestgreen;
 }
+
+/* Header styles */
 header {
   background-color: rgb(59, 57, 57);
   padding: 1.25rem;
@@ -20,11 +22,15 @@ header {
 }
 header h1 {
   font-weight: bold;
+  margin: 0;
 }
+
+/* Navigation styles */
 nav {
   background-color: rgb(59, 57, 57);
   padding: 1rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   border-radius: 0.5rem;
@@ -46,43 +52,54 @@ nav a.current {
   border-color: #fff;
   background-color: #808080;
 }
+
+/* Main content styles */
 .main-content {
   max-width: 50rem;
+  width: 90%;
   margin: 0 auto;
-  padding: 2.5rem;
+  padding: 2.5rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   background-color: #2E7D32;
 }
-.description-box {
-  background-color: #666;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: 2px solid #808080;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #f0f0f0;
-  width: 100%;
+
+/* Image container for flex layout */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
 }
-.user {
-  background-color: #666;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: 2px solid #808080;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #f0f0f0;
-  width: 100%;
-}
-img {
+
+/* Individual images styling */
+.image-gallery img {
   max-width: 20em;
   height: auto;
-  display: block;
-  margin: 0 auto;
   border: 0.25em solid black;
   border-radius: 0.625rem;
+  flex: 1 1 150px; /* allows shrinking and growing */
 }
+
+/* Text boxes styles */
+.description-box, .user {
+  background-color: #666;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #808080;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f0f0f0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.description-box h2 {
+  margin-top: 0;
+}
+
+/* Footer styles */
 footer p {
   background-color: rgb(59, 57, 57);
   color: white !important;
@@ -90,22 +107,23 @@ footer p {
   padding: 0.625rem;
   margin-top: 1rem;
 }
-/* Responsive tweaks - keep your look on PC, adapt on small screens */
+
+/* Responsive tweaks for smaller screens */
 @media (max-width: 768px) {
   /* Stack images vertically and resize */
-  .main-content > div {
+  .image-gallery {
     flex-direction: column;
   }
-  img {
+  .image-gallery img {
     max-width: 80%;
   }
-  /* Make text boxes adapt to smaller width, reduce font size for better fit */
+  /* Reduce font size for text boxes */
   .description-box,
   .user {
     font-size: 0.9rem;
     line-height: 1.4;
     padding: 1rem;
-    word-wrap: break-word; /* ensure no overflow */
+    word-wrap: break-word;
   }
   /* Stack nav links vertically and center them */
   nav {
@@ -119,7 +137,7 @@ footer p {
 }
 @media (max-width: 480px) {
   /* Further resize images and text */
-  img {
+  .image-gallery img {
     max-width: 70%;
   }
   .description-box,
@@ -146,12 +164,14 @@ footer p {
 </nav>
 
 <div class="main-content">
-  <div style="display: flex; justify-content: center; align-items: center; gap: 1rem;">
+  <!-- Image gallery with flexible layout -->
+  <div class="image-gallery">
     <img src="WSScreen/Screenshot 2025-08-19 114040.png" alt="A picture of Aidrin Morris" style="max-width: 15em;">
     <img src="Glasses.svg" alt="Glasses" style="max-width: 20em; border: 0.25em solid black; border-radius: 0.625rem;">
     <img src="WSScreen/UpdatedPic.png" alt="Newer picture of Aidrin Morris" style="max-width: 15em;">
   </div>
 
+  <!-- Description and content sections -->
   <div class="description-box">
     <p>My name is Aidrin Morris, I'm working towards becoming a tech support
        specialist. I've kind of fallen off the technical train and have been thinking
@@ -177,6 +197,7 @@ footer p {
        I would drive and work on cars more often.</p>
   </div>
 
+  <!-- User info section -->
   <div class="user">
     <p>I'm pretty shy, but I'm trying to push myself to talk to more people. Living in the middle of nowhere doesn't help though, so I usually do everything online. If you maybe wanted to talk to me about anything I mainly use <strong>Discord</strong>. My username is tizerofthesanann or my id: 1253912376588107868. (tizerofthesanann is a name I came up where I used to work.)</p>
   </div>
