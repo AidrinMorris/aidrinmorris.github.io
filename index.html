@@ -110,11 +110,13 @@
     font-size: 1rem;
     line-height: 1.5;
     color: #f0f0f0;
-    width: auto; /* Fit content width */
-    display: inline-block; /* shrink to fit content */
-    max-width: 100%; /* prevent overflow */
+    width: 100%; /* Make sure they take full width of container */
+    max-width: 600px; /* Optional: limit maximum width for readability */
+    margin: 0 auto; /* Center the boxes */
     box-sizing: border-box;
   }
+  /* Removed display: inline-block; and width: auto; for responsiveness */
+
   .description-box h2 {
     margin-top: 0;
   }
@@ -203,9 +205,9 @@
 <div class="main-content">
   <!-- Image gallery with flexible layout -->
   <div class="image-gallery">
-    <img src="WSScreen/Screenshot 2025-08-19 114040.png" alt="A picture of Aidrin Morris" class="small-img">
-    <img src="Glasses.svg" alt="Glasses" class="small-img" style="border: 0.25em solid black; border-radius: 0.625rem;">
-    <img src="WSScreen/UpdatedPic.png" alt="Newer picture of Aidrin Morris" class="small-img">
+    <img src="WSScreen/Screenshot 2025-08-19 114040.png" alt="A picture of Aidrin Morris" class="small-img" />
+    <img src="Glasses.svg" alt="Glasses" class="small-img" style="border: 0.25em solid black; border-radius: 0.625rem;" />
+    <img src="WSScreen/UpdatedPic.png" alt="Newer picture of Aidrin Morris" class="small-img" />
   </div>
 
   <!-- Description sections -->
