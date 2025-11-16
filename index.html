@@ -5,13 +5,13 @@
 <title>Aidrin Morris's About Me Website - Page 1</title>
 <style>
   :root {
-    --spacing-small: 0.625rem;    /* 10px */
-    --spacing-medium: 1rem;       /* 16px */
-    --spacing-large: 2rem;        /* 32px */
-    --border-radius-small: 0.25rem; /* 4px */
-    --border-radius-medium: 0.5rem; /* 8px */
-    --border-radius-large: 0.75rem; /* 12px */
-    --border-thickness: 0.25em;   /* 4px */
+    --spacing-small: 0.625rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --border-radius-small: 0.25rem;
+    --border-radius-medium: 0.5rem;
+    --border-radius-large: 0.75rem;
+    --border-thickness: 0.25em;
     --font-size-heading: 1.5rem;
   }
 
@@ -76,7 +76,7 @@
     padding: var(--spacing-large) calc(var(--spacing-medium) * 1.5);
   }
 
-  /* Make grid items stack on smaller screens */
+  /* Grid items stack on smaller screens */
   @media (max-width: 768px) {
     .main-content {
       grid-template-columns: 1fr;
@@ -91,9 +91,9 @@
     gap: var(--spacing-medium);
     align-items: center;
   }
-  /* Specific image styles with relative units */
+  /* Specific image styles */
   .image-gallery img {
-    max-width: none; /* Remove fixed max-width */
+    max-width: none;
     width: auto;
     height: auto;
     border: var(--border-thickness) solid black;
@@ -101,7 +101,7 @@
     flex: 1 1 150px;
   }
 
-  /* Description and user sections */
+  /* Description and "Me" sections */
   .description-box, .user {
     background-color: #666;
     padding: 1rem;
@@ -110,18 +110,17 @@
     font-size: 1rem;
     line-height: 1.5;
     color: #f0f0f0;
-    width: 100%; /* Make sure they take full width of container */
-    max-width: 600px; /* Optional: limit maximum width for readability */
-    margin: 0 auto; /* Center the boxes */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     box-sizing: border-box;
   }
-  /* Removed display: inline-block; and width: auto; for responsiveness */
 
   .description-box h2 {
     margin-top: 0;
   }
 
-  /* Footer styles, matching other pages */
+  /* Footer style */
   footer p {
     background-color: rgb(59, 57, 57);
     color: white !important;
@@ -130,9 +129,7 @@
     margin-top: var(--spacing-large);
   }
 
-  /* Responsive adjustments for smaller screens */
   @media(max-width: 768px){
-    /* Stack header, nav, and images vertically for smaller screens */
     body {
       align-items: stretch;
     }
@@ -152,7 +149,6 @@
     }
   }
   @media(max-width: 480px){
-    /* Further resize images and font sizes for very small screens */
     .image-gallery img {
       max-width: 70%;
     }
@@ -163,17 +159,14 @@
       padding: 0.75rem;
     }
   }
-  /* Larger screens (>1200px) */
   @media(min-width: 1200px){
     body {
-      font-size: 1.2rem; /* Larger base font size for very large screens */
+      font-size: 1.2rem;
     }
   }
-  /* Additional adjustments for medium screens (not strictly necessary but good practice) */
   @media(max-width: 992px){
-    /* Optional: further tweaks for medium screens if needed */
   }
-  /* Very small screens (below 320px) */
+  /* Small screens */
   @media(max-width: 320px){
     body {
       font-size: 0.75rem;
@@ -203,14 +196,14 @@
 </nav>
 
 <div class="main-content">
-  <!-- Image gallery with flexible layout -->
+  <!-- Image gallery -->
   <div class="image-gallery">
     <img src="WSScreen/Screenshot 2025-08-19 114040.png" alt="A picture of Aidrin Morris" class="small-img" />
     <img src="Glasses.svg" alt="Glasses" class="small-img" style="border: 0.25em solid black; border-radius: 0.625rem;" />
     <img src="WSScreen/UpdatedPic.png" alt="Newer picture of Aidrin Morris" class="small-img" />
   </div>
 
-  <!-- Description sections -->
+  <!-- Description -->
   <div class="description-box">
     <p>My name is Aidrin Morris, I'm working towards becoming a tech support
        specialist. I've kind of fallen off the technical train and have been thinking
@@ -236,7 +229,7 @@
        I would drive and work on cars more often.</p>
   </div>
 
-  <!-- User info section -->
+  <!-- My info section -->
   <div class="user">
     <p>I'm pretty shy, but I'm trying to push myself to talk to more people. Living in the middle of nowhere doesn't help though, so I usually do everything online. If you maybe wanted to talk to me about anything I mainly use <strong>Discord</strong>. My username is tizerofthesanann or my id: 1253912376588107868. (tizerofthesanann is a name I came up where I used to work.)</p>
   </div>
