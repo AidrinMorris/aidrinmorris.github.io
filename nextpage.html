@@ -5,6 +5,7 @@
 <title>Aidrin Morris - Page 2</title>
 <style>
   :root {
+    /* Spacing and sizes in rem, vw, or vh for flexibility */
     --spacing-small: 0.625rem;   /* 10px */
     --spacing-medium: 1rem;      /* 16px */
     --spacing-large: 2rem;       /* 32px */
@@ -13,6 +14,8 @@
     --border-radius-large: 1rem;    /* 16px */
     --border-thickness: 0.125rem; /* 2px */
     --font-size-heading: 1em;
+    --vw: 1vw; /* Viewport width unit for scaling */
+    --vh: 1vh; /* Viewport height unit for scaling */
   }
 
   /* Basic layout styles */
@@ -23,6 +26,7 @@
     margin: 0;
     font-family: 'Courier New', monospace;
     background-color: #404040;
+    font-size: 1rem;
   }
 
   /* Navigation styles */
@@ -52,36 +56,6 @@
     background-color: #808080;
   }
 
-  /* Fixed buttons styles */
-  .go-to-bottom, .go-to-top {
-    display: inline-block;
-    width: 10em;
-    padding: 0.75em 1.5em;
-    margin: 1em auto 0 auto;
-    background-color: #404040;
-    color: #f0f0f0;
-    font-weight: bold;
-    border-radius: 0.5em;
-    border: 0.25em solid #222;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    position: fixed;
-    z-index: 1000;
-  }
-  .go-to-bottom {
-    bottom: 6em;
-    right: 1.25em;
-  }
-  .go-to-top {
-    bottom: 1.25em;
-    right: 1.25em;
-  }
-  .go-to-bottom:hover, .go-to-top:hover {
-    background-color: #606060;
-  }
-
   /* Main content styles */
   .content {
     flex: 1;
@@ -93,18 +67,19 @@
     gap: var(--spacing-large);
   }
 
-  /* Sections */
   section {
     padding: var(--spacing-medium);
     background: #2E7D32;
     border-radius: var(--border-radius-large);
     box-shadow: 0 0 1em rgba(0,0,0,0.5);
   }
+
   h2 {
     margin-top: 0;
     color: #fff;
     text-align: center;
   }
+
   p {
     font-size: 1rem;
     line-height: 1.4;
@@ -115,52 +90,90 @@
     color: #222;
   }
 
-  /* Description box */
-  .description-box {
-    background: #666;
-    padding: 0.5em 1em;
-    margin-bottom: 1em;
-    border-radius: 0.5em;
-    border: 2px solid #808080;
-    font-size: 0.9rem;
-    line-height: 1.3;
-    color: #f0f0f0;
-    max-width: 40em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Images inside description box and general images */
-  .description-box img, img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border: 0.25em solid black;
-    border-radius: 0.625em;
-  }
-
-  /* Specific image size classes using relative units */
+  /* Style for image containers and images */
   .wss1 { max-width: 20em; }
   .wss2 { max-width: 30em; }
   .wss3 { max-width: 40em; }
   .NGE { max-width: 20vw; }
   .GitS { max-width: 20vw; }
 
-  /* Responsive adjustments */
-  @media(max-width: 768px){
-    nav { flex-direction: column; }
-    img { max-width: 80%; }
-    .NGE, .GitS { max-width: 50vw; }
+  /* Rounded edges for all images */
+  img {
+    border-radius: 8px;
+    display: block;
+    margin: auto;
   }
-  @media(max-width: 480px){
-    img { max-width: 70%; }
-    /* Adjust button sizes for small screens */
-    .go-to-bottom, .go-to-top {
-      width: 8em;
-      font-size: 0.8rem;
+
+  /* Responsive adjustments: media queries for various sizes */
+
+  @media(max-width: 1200px){
+    body {
+      font-size: 0.95rem;
     }
   }
+
+  @media(max-width: 992px){
+    body {
+      font-size: 0.9rem;
+    }
+    /* Adjust layout for medium screens */
+    nav {
+      flex-direction: column;
+    }
+    /* Images scaling for medium screens */
+    img {
+      max-width: 80%;
+    }
+    .NGE, .GitS {
+      max-width: 50vw;
+    }
+  }
+
+  @media(max-width: 768px){
+    body {
+      font-size: 0.85rem;
+    }
+    /* Smaller screens: stack nav items vertically */
+    nav {
+      flex-direction: column;
+    }
+    /* Adjust images to smaller max widths */
+    img {
+      max-width: 70%;
+    }
+    .NGE, .GitS {
+      max-width: 60vw;
+    }
+  }
+
+  @media(max-width: 480px){
+    body {
+      font-size: 0.8rem;
+    }
+    /* Resize images and buttons for very small screens */
+    img {
+      max-width: 70%;
+    }
+  }
+
+  /* Larger screens (>1200px) */
+  @media(min-width: 1200px){
+    body {
+      font-size: 1.1rem;
+    }
+  }
+
+  /* Footer styles */
+  footer {
+    background-color: #555; /* footer background color */
+    padding: 1em;
+    text-align: center; /* Center the text horizontally */
+  }
+  footer p {
+    color: #fff; /* White text */
+    margin: 0;
+  }
+
 </style>
 </head>
 <body>
@@ -169,18 +182,15 @@
 <nav>
   <a href="index.html">Intro</a>
   <a href="nextpage.html" class="current">Manga/Anime</a>
-  <a href="nextpage2.html">MTG and D&D</a>
+  <a href="nextpage2.html">MTG and D&amp;D</a>
   <a href="nextpage3.html">Collection</a>
   <a href="nextpage4.html">Music</a>
 </nav>
 
-<!-- Fixed buttons -->
-<a href="#bottom" class="go-to-bottom">Go to Bottom of Page</a>
-<a href="#top" class="go-to-top">Go to top of Page</a>
-
+<!-- Content Sections -->
 <div class="content">
 
-<!-- Favorite Manga/Anime Section -->
+<!-- Example of your content -->
 <section>
 <h2>My Favorite Manga/Anime</h2>
 <p>
@@ -195,7 +205,6 @@ Learn more about the Gauna on the <a href="https://sidonia-no-kishi.fandom.com/w
 <img src="WSScreen/KoS.png" alt="Knights of Sidonia" class="kos-screenshot" />
 </section>
 
-<!-- Gauna Images Section -->
 <section>
 <h2>The Gauna</h2>
 <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
@@ -205,10 +214,9 @@ Learn more about the Gauna on the <a href="https://sidonia-no-kishi.fandom.com/w
 </div>
 </section>
 
-<!-- Other Favorites Section -->
 <section>
 <h2>Other Favorites</h2>
-<p>My other favorite anime/manga are <strong>Neon Genesis Evangelion</strong> and <strong>Ghost in the Shell</strong>. These have complex stories, deep themes, and impactful characters. <strong>Neon Genesis Evangelion</strong> is hard to follow so you need to look up some things. <strong>Ghost in the Shell</strong> is a very good anime. I also make custom <strong>Magic: The Gathering</strong> cards around these anime/manga, and sometimes D&D characters based on them.</p>
+<p>My other favorite anime/manga are <strong>Neon Genesis Evangelion</strong> and <strong>Ghost in the Shell</strong>. These have complex stories, deep themes, and impactful characters. <strong>Neon Genesis Evangelion</strong> is hard to follow so you need to look up some things. <strong>Ghost in the Shell</strong> is a very good anime. I also make custom <strong>Magic: The Gathering</strong> cards around these anime/manga, and sometimes D&amp;D characters based on them.</p>
 <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
     <img src="WSScreen/NGE.png" alt="Neon Genesis Evangelion" class="NGE" style="width:100%; height:auto;">
     <img src="WSScreen/GitS.png" alt="Ghost in the Shell" class="GitS" style="width:100%; height:auto;">

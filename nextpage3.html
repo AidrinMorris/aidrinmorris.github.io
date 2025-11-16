@@ -113,6 +113,59 @@
       min-width: 80%;
     }
   }
+
+  /* Additional media queries for major breakpoints */
+
+  /* Large screens (e.g., desktops) */
+  @media(min-width: 1200px) {
+    body {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    nav {
+      justify-content: space-around;
+    }
+    .text-box {
+      font-size: 1.3em;
+    }
+  }
+
+  /* Medium screens (e.g., tablets in landscape) */
+  @media(max-width: 1024px) and (min-width: 769px) {
+    body {
+      padding: 0 2rem;
+    }
+    .side-by-side {
+      flex-direction: row;
+    }
+    .text-box {
+      min-width: 45%;
+    }
+    .image-row {
+      flex-direction: row;
+    }
+  }
+
+  /* Small screens (e.g., phones) */
+  @media(max-width: 480px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav a {
+      padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1);
+    }
+    .side-by-side {
+      flex-direction: column;
+      align-items: center;
+    }
+    .text-box {
+      min-width: 80%;
+    }
+    .image-row {
+      flex-direction: column;
+    }
+  }
 </style>
 </head>
 <body>
