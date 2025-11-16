@@ -13,7 +13,6 @@ body {
   font-family: 'Courier New', monospace;
   background-color: #404040;
 }
-
 /* Navigation menu styling - horizontal across all pages */
 nav {
   background-color: rgb(59, 57, 57);
@@ -40,7 +39,6 @@ nav a.current {
   border-color: #fff;
   background-color: #808080;
 }
-
 /* Style for the link button that navigates to the bottom of the page */
 .go-to-bottom {
   display: inline-block;
@@ -100,7 +98,6 @@ nav a.current {
   flex-direction: column;
   gap: 1rem;
 }
-
 /* Sections styling with background and rounded corners */
 section {
   padding: 1rem;
@@ -108,15 +105,11 @@ section {
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-
-/* Headings styling */
 h2 {
   margin-top: 0;
   color: #ffffff;
   text-align: center;
 }
-
-/* Paragraph styling */
 p {
   font-size: 1rem;
   line-height: 1.4;
@@ -126,7 +119,6 @@ p {
   border-radius: 0.3rem;
   color: #222;
 }
-
 /* Large description boxes */
 .description-box {
   background: #666;
@@ -139,7 +131,6 @@ p {
   color: #f0f0f0;
   max-width: 40em;
 }
-
 /* Style for images inside description boxes or content, scalable */
 .description-box img,
 img {
@@ -150,12 +141,39 @@ img {
   border: 0.25rem solid black;
   border-radius: 0.625rem;
 }
-footer p {
-  background-color: rgb(59, 57, 57);
-  color: white !important;
-  text-align: center;
-  padding: 0.625rem;
-  margin-top: 1rem;
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  /* Resize images for small screens */
+  img {
+    max-width: 80%;
+  }
+  .description-box,
+  .content .user {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 1rem;
+    word-wrap: break-word;
+  }
+  .gauna-img {
+    max-width: 6em;
+  }
+}
+@media (max-width: 480px) {
+  img {
+    max-width: 70%;
+  }
+  .description-box,
+  .content .user {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    padding: 0.75rem;
+  }
+  .gauna-img {
+    max-width: 4em;
+  }
 }
 </style>
 </head>
@@ -170,14 +188,14 @@ footer p {
   <a href="nextpage4.html">Music</a>
 </nav>
 
-<!-- Button linking to section at bottom of page -->
+<!-- Buttons -->
 <a href="#bottom" class="go-to-bottom">Go to Bottom of Page</a>
 <a href="#top" class="go-to-top">Go to top of Page</a>
 
-<!-- Content area -->
+<!-- Content -->
 <div class="content">
 
-  <!-- Section: Favorite manga/anime with images -->
+  <!-- Favorite manga/anime with images -->
   <section>
     <h2>My Favorite Manga/Anime</h2>
     <p>
@@ -192,35 +210,30 @@ footer p {
     <img src="WSScreen/KoS.png" alt="Knights of Sidonia" style="max-width: 100%; height: auto; margin-top: 1rem;">
   </section>
 
-  <!-- Section: Gauna images -->
+  <!-- Gauna images -->
   <section>
     <h2>The Gauna</h2>
-    <div class="images-row">
-      <img src="WSScreen/Screenshot 2025-10-24 170314.png" alt="Gauna Image 2" />
-      <img src="WSScreen/Screenshot 2025-10-24 170406.png" alt="Gauna Image 3" />
-      <img src="WSScreen/Screenshot 2025-10-24 170535.png" alt="Gauna Image 4" />
+    <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
+      <img src="WSScreen/Screenshot 2025-10-24 170314.png" alt="Gauna Image 2" class="gauna-img" />
+      <img src="WSScreen/Screenshot 2025-10-24 170406.png" alt="Gauna Image 3" class="gauna-img" />
+      <img src="WSScreen/Screenshot 2025-10-24 170535.png" alt="Gauna Image 4" class="gauna-img" />
     </div>
   </section>
 
-  <!-- Section: Other favorites -->
+  <!-- Other favorites -->
   <section>
     <h2>Other Favorites</h2>
-    <p>
-      My other favorite anime/manga are <strong>Neon Genesis Evangelion</strong> and <strong>Ghost in the Shell</strong>. These have complex stories, deep themes, and impactful characters. <storng> Neon Genesis Evangelion </storng> is hard to follow so you really need to look up some things to understand what's even happening sometimes. <strong>Ghost in the Shell</strong> is a much watch Anime. The complete manga is really good, but the final book is very hard to follow. I actually make custom <strong>Magic: The Gathering</strong> cards around these anime/manga. I also make <strong>D&D</strong> characters based around them too. I mostly do this when I'm bored.
-    </p>
-    <div class="favorites-container" style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
-      <div class="favorites-box">
-        <img src="WSScreen/NGE.png" alt="Neon Genesis Evangelion" />
-      </div>
-      <div class="favorites-box">
-        <img src="WSScreen/GitS.png" alt="Ghost in the Shell" />
-      </div>
-          </div>
+    <p>My other favorite anime/manga are <strong>Neon Genesis Evangelion</strong> and <strong>Ghost in the Shell</strong>. These have complex stories, deep themes, and impactful characters. <strong>Neon Genesis Evangelion</strong> is hard to follow so you need to look up some things. <strong>Ghost in the Shell</strong> is a very good anime. I also make custom <strong>Magic: The Gathering</strong> cards around these anime/manga, and sometimes D&D characters based on them.</p>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
+      <div style="max-width:150px;"><img src="WSScreen/NGE.png" alt="Neon Genesis Evangelion"></div>
+      <div style="max-width:150px;"><img src="WSScreen/GitS.png" alt="Ghost in the Shell"></div>
+    </div>
   </section>
   <section id="bottom" style="margin-top:2rem; padding:1rem; background:#555; border-radius:0.5rem;">
   </section>
 </div>
 
+<!-- Footer -->
 <footer>
   <p>&copy; 2025 Aidrin Morris</p>
 </footer>
