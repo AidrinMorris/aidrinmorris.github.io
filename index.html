@@ -54,7 +54,6 @@ nav a.current {
   flex-direction: column;
   gap: 1rem;
   background-color: #2E7D32;
-  border-radius: 0.5rem;
 }
 .description-box {
   background-color: #666;
@@ -64,6 +63,7 @@ nav a.current {
   font-size: 1rem;
   line-height: 1.5;
   color: #f0f0f0;
+  width: 100%;
 }
 .user {
   background-color: #666;
@@ -73,21 +73,61 @@ nav a.current {
   font-size: 1rem;
   line-height: 1.5;
   color: #f0f0f0;
+  width: 100%;
 }
 img {
   max-width: 20em;
   height: auto;
   display: block;
   margin: 0 auto;
-  border: 0.25rem solid black;
+  border: 0.25em solid black;
   border-radius: 0.625rem;
 }
-footer {
+footer p {
   background-color: rgb(59, 57, 57);
-  color: white;
+  color: white !important;
   text-align: center;
   padding: 0.625rem;
   margin-top: 1rem;
+}
+/* Responsive tweaks - keep your look on PC, adapt on small screens */
+@media (max-width: 768px) {
+  /* Stack images vertically and resize */
+  .main-content > div {
+    flex-direction: column;
+  }
+  img {
+    max-width: 80%;
+  }
+  /* Make text boxes adapt to smaller width, reduce font size for better fit */
+  .description-box,
+  .user {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 1rem;
+    word-wrap: break-word; /* ensure no overflow */
+  }
+  /* Stack nav links vertically and center them */
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    width: 80%;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  /* Further resize images and text */
+  img {
+    max-width: 70%;
+  }
+  .description-box,
+  .user {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    padding: 0.75rem;
+  }
 }
 </style>
 </head>
@@ -135,10 +175,6 @@ footer {
        I also make custom <strong>MTG</strong> cards.</p>
     <p>I love driving and working on cars. If the gas and car/part prices weren't so high,
        I would drive and work on cars more often.</p>
-  </div>
-
-  <div class="description-box">
-    <p>The next page I will focus on my favorite anime/manga, as I have recently been really into these lately.</p>
   </div>
 
   <div class="user">
