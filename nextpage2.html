@@ -14,10 +14,10 @@
   }
   nav {
     background-color: rgb(59, 57, 57);
-    padding: 1rem;
+    padding: 1rem; /* relative padding */
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1rem; /* relative gap */
     border-radius: 0.5rem;
     margin-bottom: 1rem;
   }
@@ -25,9 +25,9 @@
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    border: 2px solid transparent;
+    padding: 0.5rem 1rem; /* relative padding */
+    border-radius: 0.25rem;
+    border: 2px solid transparent; /* border width is already relative */
     transition: background-color 0.3s, border-color 0.3s;
   }
   nav a:hover {
@@ -37,34 +37,48 @@
     border-color: #fff;
     background-color: #808080;
   }
+  /* Responsive images class for all images */
+  .responsive-img {
+    display: block;
+    margin: 1rem auto; /* vertical margin */
+    max-width: 80vw; /* flexible width based on viewport */
+    height: auto;
+    border-radius: 1rem; /* rounded corners */
+  }
+  @media(max-width: 768px){
+    .responsive-img {
+      max-width: 90vw;
+    }
+  }
+
+  /* Content layout styles */
   .side-by-side {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 2rem;
+    gap: 2rem; /* scalable gap */
     flex-wrap: wrap;
-    padding: 2rem;
+    padding: 2rem; /* responsive padding */
   }
   .text-box {
     background-color: #666;
-    padding: 2rem;
-    border-radius: 10px;
-    border: 2px solid #808080;
+    padding: 2rem; /* responsive padding */
+    border-radius: 1rem;
+    border: 0.2rem solid #808080; /* scalable border thickness */
     font-size: 1.2em;
     line-height: 1.5;
     color: #f0f0f0;
-    max-width: 600px;
     flex: 1;
-    min-width: 300px;
+    min-width: 20rem; /* prevent too narrow on small screens */
     box-sizing: border-box;
   }
   .additional-box {
     width: 100%;
-    max-width: 600px;
+    max-width: 37.5rem;
     margin-top: 2rem;
   }
   h1 {
-    font-size: 1em;
+    font-size: 1em; /* base font size */
     margin-bottom: 1rem;
     text-align: center;
   }
@@ -81,7 +95,7 @@
     background-color: rgb(59, 57, 57);
     color: white;
     text-align: center;
-    padding: 0.625rem;
+    padding: 0.625rem; /* scalable padding */
     margin-top: 1rem;
   }
 </style>
@@ -95,7 +109,7 @@
     <a href="nextpage4.html">Music</a>
   </nav>
   <div class="side-by-side">
-    <div class="text-box" style="width: 100%; max-width: 600px; background-color: #2E7D32">
+    <div class="text-box" style="background-color: #2E7D32;">
       <h1>Magic: The Gathering and D&D</h1>
       <p>
         I've played <strong>D&D</strong> for a long time, but I'm newer to <strong>MTG.</strong> I started playing <strong>D&D</strong> around six years ago and <strong>MTG</strong> a little under a year and a half ago. A couple of my lower classmate friends graduated this year and have since moved away for college reasons. So it's just me and three other friends. I do still keep in touch with the people who have moved away. Our remaining group hasn't bothered to start up another campaign because of conflicting times, so we can only really play <strong>MTG</strong> as it's more of a mobile game.
@@ -114,7 +128,7 @@
         Website Link: <a href="https://magic.wizards.com/en/formats" target="_blank" rel="noopener noreferrer">Wizards of the Coast format information</a>
       </p>
     </div>
-    <div class="text-box" style="width: 100%; max-width: 600px; background-color: #2E7D32">
+    <div class="text-box" style="background-color: #2E7D32;">
       <h1>My favorite <strong>D&D</strong> character</h1>
       <p>
         I have lots of <strong>D&D</strong> characters so I will just pick out my favorite character.
@@ -133,15 +147,15 @@
       </p>
     </div>
   </div>
-  <img src="WSScreen/MyMTG.png" alt="My MTG Phyrexian Collection" style="display: block; margin: 1rem auto; max-width: 100%; height: auto; border-radius: 10px;" />
-  <img src="WSScreen/DnD.png" alt="D&D Screenshot" style="display: block; margin: 1rem auto; max-width: 100%; height: auto; border-radius: 10px;"/>
-  <div class="text-box centered-box" style="background-color: #2E7D32">
+  <img src="WSScreen/MyMTG.png" alt="My MTG Phyrexian Collection" class="responsive-img" />
+  <img src="WSScreen/DnD.png" alt="D&D Screenshot" class="responsive-img" />
+  <div class="text-box centered-box" style="background-color: #2E7D32;">
     <h1>Custom MTG</h1>
     <p>
       I make custom <strong>MTG</strong> cards and have been for a while. I make customs out of anything I find interesting enough or from media I make. From <strong>Elden Ring</strong> to <strong>Knights of Sidonia,</strong> I have few limits. One of my friends also enjoys making custom cards; we were working together on making mockup sets, or what-if sets, for <strong>Elden Ring.</strong>
     </p>
   </div>
-  <img src="WSScreen/MagicCard.png" alt="Magic Card Screenshot" style="display: block; margin: 1rem auto; max-width: 100%; height: auto; border-radius: 10px;"/>
+  <img src="WSScreen/MagicCard.png" alt="Magic Card Screenshot" class="responsive-img" />
   <footer>
     <p>&copy; 2025 Aidrin Morris</p>
   </footer>
