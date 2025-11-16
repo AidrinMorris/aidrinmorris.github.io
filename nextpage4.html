@@ -4,6 +4,16 @@
 <meta charset="UTF-8" />
 <title>Aidrin Morris - Page 4</title>
 <style>
+  :root {
+    --spacing-small: 0.625rem;   /* 10px */
+    --spacing-medium: 1rem;      /* 16px */
+    --spacing-large: 2rem;       /* 32px */
+    --font-size-large: 1.2em;
+    --border-radius-small: 0.25rem; /* 4px */
+    --border-radius-medium: 0.625rem; /* 10px */
+    --border-thickness: 0.125rem; /* 2px */
+  }
+
   body {
     display: flex;
     flex-direction: column;
@@ -13,54 +23,71 @@
     background-color: #404040;
     align-items: center;
   }
+
   nav {
     background-color: rgb(59, 57, 57);
-    padding: 1rem;
+    padding: var(--spacing-medium);
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    gap: var(--spacing-medium);
+    border-radius: var(--border-radius-medium);
+    margin-bottom: var(--spacing-large);
   }
+
   nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    border: 0.125rem solid transparent;
+    padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1.5);
+    border-radius: var(--border-radius-small);
+    border: var(--border-thickness) solid transparent;
     transition: background-color 0.3s, border-color 0.3s;
   }
+
   nav a:hover {
     background-color: #606060;
   }
+
   nav a.current {
     border-color: #fff;
     background-color: #808080;
   }
+
   .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: var(--spacing-large);
     width: 90%;
-    padding: 1rem;
+    padding: var(--spacing-medium);
   }
+
   .content-block {
     background-color: #2E7D32;
-    padding: 2rem;
+    padding: var(--spacing-large);
     border-radius: 10px;
-    border: 0.125rem solid #808080;
-    font-size: 1.2em;
+    border: var(--border-thickness) solid #808080;
+    font-size: var(--font-size-large);
     line-height: 1.5;
     color: #f0f0f0;
   }
+
   footer {
     background-color: rgb(59, 57, 57);
     color: white;
     text-align: center;
-    padding: 0.625rem;
-    margin-top: 1rem;
+    padding: var(--spacing-small);
+    margin-top: var(--spacing-large);
     width: 100%;
+  }
+
+  /* Responsive adjustments for smaller screens */
+  @media(max-width: 768px) {
+    body {
+      align-items: stretch;
+    }
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 </head>

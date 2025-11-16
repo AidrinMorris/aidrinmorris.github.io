@@ -4,6 +4,17 @@
 <meta charset="UTF-8" />
 <title>Aidrin Morris - Page 3</title>
 <style>
+  :root {
+    --spacing-small: 0.625rem;    /* 10px */
+    --spacing-medium: 1rem;       /* 16px */
+    --spacing-large: 2rem;        /* 32px */
+    --border-radius-small: 0.25rem; /* 4px */
+    --border-radius-medium: 0.5rem; /* 8px */
+    --border-radius-large: 1rem;    /* 16px */
+    --border-thickness: 0.125rem; /* 2px */
+    --font-size-heading: 1em;     /* base font size for headings */
+  }
+
   body {
     display: flex;
     flex-direction: column;
@@ -12,91 +23,104 @@
     font-family: 'Courier New', monospace;
     background-color: #404040;
   }
+
   nav {
     background-color: rgb(59, 57, 57);
-    padding: 1rem; /* relative padding */
+    padding: var(--spacing-medium);
     display: flex;
     justify-content: center;
-    gap: 1rem; /* relative gap */
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    gap: var(--spacing-medium);
+    border-radius: var(--border-radius-large);
+    margin-bottom: var(--spacing-large);
   }
+
   nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    padding: 0.5rem 1rem; /* relative padding */
-    border-radius: 0.25rem;
-    border: 2px solid transparent; /* border width is already relative */
+    padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1.5);
+    border-radius: var(--border-radius-small);
+    border: var(--border-thickness) solid transparent;
     transition: background-color 0.3s, border-color 0.3s;
   }
+
   nav a:hover {
     background-color: #606060;
   }
+
   nav a.current {
     border-color: #fff;
     background-color: #808080;
   }
-  /* Responsive images class for all images */
-  .responsive-img {
-    display: block;
-    margin: 1rem auto; /* vertical margin */
-    max-width: 80vw; /* flexible width based on viewport */
-    height: auto;
-    border-radius: 1rem; /* rounded corners */
-  }
-  @media(max-width: 768px){
-    .responsive-img {
-      max-width: 90vw;
-    }
-  }
 
-  /* Content layout styles */
   .side-by-side {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 2rem; /* scalable gap */
+    gap: var(--spacing-large);
     flex-wrap: wrap;
-    padding: 2rem; /* responsive padding */
+    padding: var(--spacing-large);
   }
+
   .text-box {
     background-color: #666;
-    padding: 2rem; /* responsive padding */
-    border-radius: 1rem;
-    border: 0.2rem solid #808080; /* scalable border thickness */
+    padding: var(--spacing-large);
+    border-radius: var(--border-radius-large);
+    border: var(--border-thickness) solid #808080;
     font-size: 1.2em;
     line-height: 1.5;
     color: #f0f0f0;
     flex: 1;
-    min-width: 20rem; /* prevent too narrow on small screens */
+    min-width: 20rem;
+    max-width: 40rem;
     box-sizing: border-box;
   }
-  .additional-box {
-    width: 100%;
-    max-width: 37.5rem;
-    margin-top: 2rem;
+
+  /* Inline styles for specific background colors are kept for flexibility */
+
+  .responsive-img {
+    display: block;
+    margin: var(--spacing-large) auto;
+    max-width: 80vw;
+    height: auto;
+    border-radius: var(--border-radius-large);
   }
-  h1 {
-    font-size: 1em; /* base font size */
-    margin-bottom: 1rem;
-    text-align: center;
+
+  @media(max-width: 768px) {
+    .responsive-img {
+      max-width: 90vw;
+    }
+    .side-by-side {
+      flex-direction: column;
+      align-items: center;
+    }
+    .text-box {
+      min-width: 80%;
+    }
   }
-  p {
-    margin: 0 0 1rem 0;
-  }
+
   .centered-box {
-    margin-top: 2rem;
+    margin-top: var(--spacing-large);
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
   }
+
   footer {
     background-color: rgb(59, 57, 57);
     color: white;
     text-align: center;
-    padding: 0.625rem; /* scalable padding */
-    margin-top: 1rem;
+    padding: var(--spacing-small);
+    margin-top: var(--spacing-large);
+  }
+
+  h1 {
+    font-size: 1em;
+    margin-bottom: var(--spacing-medium);
+    text-align: center;
+  }
+  p {
+    margin: 0 0 var(--spacing-medium) 0;
   }
 </style>
 </head>
@@ -108,6 +132,7 @@
     <a href="nextpage3.html">Collection</a>
     <a href="nextpage4.html">Music</a>
   </nav>
+
   <div class="side-by-side">
     <div class="text-box" style="background-color: #2E7D32;">
       <h1>Magic: The Gathering and D&D</h1>
