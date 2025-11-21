@@ -27,6 +27,7 @@
     font-family: 'Courier New', monospace;
     background-color: #404040;
     font-size: 1rem;
+    position: relative; /* for stacking context if needed */
   }
 
   /* Navigation styles */
@@ -162,15 +163,39 @@
 
   /* Footer styles */
   footer {
-    background-color: #555; /* footer background color */
+    background-color: #555;
     padding: 1em;
     text-align: center;
   }
   footer p {
-    color: #fff; /* White text */
+    color: #fff;
     margin: 0;
   }
 
+  /* Floating buttons container styles */
+  #float-buttons {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    z-index: 9999;
+  }
+  #float-buttons button {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius-small);
+    background-color: #555;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  #float-buttons button:hover {
+    background-color: #777;
+  }
 </style>
 </head>
 <body>
@@ -223,6 +248,12 @@ Learn more about the Gauna on the <a href="https://sidonia-no-kishi.fandom.com/w
 <section id="bottom" style="margin-top:2em; padding:1em; background:#555; border-radius:0.5em;">
 </section>
 
+</div>
+
+<!-- Floating Buttons always visible on the right -->
+<div id="float-buttons">
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
+  <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
 </div>
 
 <!-- Footer -->
