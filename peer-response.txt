@@ -1,1 +1,3 @@
-
+Romaric Tchokouaha: If I could offer a few suggestions to polish it even further, I’d recommend slightly reducing the image sizes on the “Manga/Anime” page and refining the responsiveness and breakpoints of your layout (as shown in the screenshot). You might also consider organizing your project files into separate folders (for HTML files and media assets) to make your work easier to manage and maintain.
+Kam Dudgeon: My other recommendation is as you have a "go to bottom of page" in this tab, to have some sort of navigation at the bottom of the page. Or alternatively, to have one that sends you back to the top of the page since that's where the navigation takes place currently.
+Website Changes: Adjusted the sizes on the Manga/Anime page, refining them. Separated files on GitHub into different folders for ease. On the Manga/Anime page, the bottom-of-page button now includes a top-of-page button.
