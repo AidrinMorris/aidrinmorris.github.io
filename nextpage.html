@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <title>Aidrin Morris - Page 2</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
 <style>
   :root {
     /* Spacing and sizes */
@@ -24,10 +31,8 @@
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    font-family: 'Courier New', monospace;
-    background-color: #404040;
-    font-size: 1rem;
-    position: relative; /* for stacking context if needed */
+    font-family: 'Roboto Slab', Arial, sans-serif; /* Using Google Font */
+    background-color: rgb(53, 54, 53);
   }
 
   /* Navigation styles */
@@ -37,8 +42,6 @@
     display: flex;
     justify-content: center;
     gap: var(--spacing-medium);
-    border-radius: var(--border-radius-large);
-    margin-bottom: var(--spacing-large);
   }
   nav a {
     color: #fff;
@@ -100,7 +103,7 @@
 
   /* Rounded edges for all images */
   img {
-    border-radius: 8px;
+    border-radius: 0.5rem;
     display: block;
     margin: auto;
   }
@@ -161,28 +164,31 @@
     }
   }
 
-  /* Footer styles */
+  /* Footer style */
   footer {
-    background-color: #555;
-    padding: 1em;
+    background-color: rgb(59, 57, 57);
+    color: white !important;
     text-align: center;
+    padding: var(--spacing-small);
+    margin-top: var(--spacing-large);
   }
+
   footer p {
     color: #fff;
-    margin: 0;
   }
 
   /* Floating buttons container styles */
   #float-buttons {
     position: fixed;
     top: 50%;
-    right: 20px;
+    right: 1.25rem;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 0.5em;
     z-index: 9999;
   }
+
   #float-buttons button {
     padding: 0.5em 1em;
     font-size: 0.9em;
@@ -193,9 +199,11 @@
     color: #fff;
     transition: background-color 0.3s;
   }
+
   #float-buttons button:hover {
     background-color: #777;
   }
+
 </style>
 </head>
 <body>
@@ -227,7 +235,7 @@ Learn more about the Gauna on the <a href="https://sidonia-no-kishi.fandom.com/w
 </section>
 
 <section>
-<h2>The Gauna</h2>
+<h2>Gauna Images</h2>
 <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
   <img src="WSScreen/Screenshot 2025-10-24 170314.png" alt="Gauna Image 2" class="wss1" />
   <img src="WSScreen/Screenshot 2025-10-24 170406.png" alt="Gauna Image 3" class="wss2" />
@@ -236,18 +244,13 @@ Learn more about the Gauna on the <a href="https://sidonia-no-kishi.fandom.com/w
 </section>
 
 <section>
-<h2>Other Favorites</h2>
-<p>My other favorite anime/manga are <strong>Neon Genesis Evangelion</strong> and <strong>Ghost in the Shell</strong>. These have complex stories, deep themes, and impactful characters. <strong>Neon Genesis Evangelion</strong> is hard to follow so you need to look up some things. <strong>Ghost in the Shell</strong> is a very good anime. I also make custom <strong>Magic: The Gathering</strong> cards around these anime/manga, and sometimes D&amp;D characters based on them.</p>
+<h2>Other Favorite Manga/Anime</h2>
+<p>My other favorite anime/manga are <strong>Neon Genesis Evangelion</strong> and <strong>Ghost in the Shell</strong>. These have complex stories, deep themes, and impactful characters. <strong>Neon Genesis Evangelion</strong> is hard to follow so you need to look up some things. <strong>Ghost in the Shell</strong> is a very good anime. I also make custom <strong>Magic: The Gathering</strong> cards around these anime/manga, and sometimes <strong>D&D</strong> characters based on them.</p>
 <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
     <img src="WSScreen/NGE.png" alt="Neon Genesis Evangelion" class="NGE" style="width:100%; height:auto;">
     <img src="WSScreen/GitS.png" alt="Ghost in the Shell" class="GitS" style="width:100%; height:auto;">
 </div>
 </section>
-
-<!-- Bottom spacer -->
-<section id="bottom" style="margin-top:2em; padding:1em; background:#555; border-radius:0.5em;">
-</section>
-
 </div>
 
 <!-- Floating Buttons always visible on the right -->
