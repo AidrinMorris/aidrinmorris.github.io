@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Aidrin Morris - Page 4</title>
 
 <!-- Google Font -->
@@ -19,6 +20,7 @@
     --border-radius-small: 0.25rem;
     --border-radius-medium: 0.625rem;
     --border-thickness: 0.125rem;
+    --max-img-height: 250px; /* set a max height for images for consistency */
   }
 
   body {
@@ -26,7 +28,7 @@
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    font-family: 'Roboto Slab', Arial, sans-serif; /* Using Google Font */
+    font-family: 'Roboto Slab', Arial, sans-serif;
     background-color: #404040;
     align-items: center;
   }
@@ -58,12 +60,12 @@
   }
 
   .grid-container {
-    display: flex;
-    flex: 1;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-large);
     width: 90%;
     padding: var(--spacing-medium);
+    flex-grow: 1; /* allow it to grow if needed */
   }
 
   .content-block {
@@ -93,19 +95,7 @@
     border-radius: var(--border-radius-medium);
   }
 
-  /* Footer style */
-  footer {
-    background-color: rgb(59, 57, 57);
-    color: white;
-    text-align: center;
-    padding: var(--spacing-small);
-    margin-top: var(--spacing-large);
-    width: 100% !important;
-    max-width: 100% !important;
-    position: relative;
-  }
-
-     /* Floating buttons container styles */
+  /* Floating buttons container styles */
   #float-buttons {
     position: fixed;
     top: 50%;
@@ -132,6 +122,18 @@
     background-color: #777;
   }
 
+  /* Footer style */
+  footer {
+    background-color: rgb(59, 57, 57);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-small);
+    margin-top: var(--spacing-large);
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Responsive adjustments */
   @media(max-width: 768px) {
     body {
       align-items: stretch;
@@ -141,28 +143,6 @@
     }
   }
 
-  /* Large screens */
-  @media(min-width: 1200px) {
-    body {
-      max-width: none;
-      margin: 0;
-    }
-  }
-
-  /* Medium screens */
-  @media(max-width: 1024px) and (min-width: 769px) {
-    body {
-      padding: 0 2rem;
-    }
-    nav {
-      justify-content: center;
-    }
-    .grid-container {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-  }
-
-  /* Small screens */
   @media(max-width: 480px) {
     nav {
       flex-direction: column;
@@ -176,6 +156,12 @@
     }
   }
 
+  @media(min-width: 1200px) {
+    body {
+      max-width: none;
+      margin: 0;
+    }
+  }
 </style>
 </head>
 <body>
@@ -197,7 +183,8 @@
     <div class="content-block">
       <h1>Some of my Favorite Songs</h1>
       <p>I have lots of favorites, I've been working on a playlist on <strong>Spotify</strong> called "One of Everything." The playlist is a favorite song in every genre I listen to.</p>
-      <p>My current favorite artists are Machine Girl and Battle Tapes; some of my favorite songs from them: Machine Girl: Ignore the Vore, Kill Screen, Necro Culture Vulture, Black Glass, and Come on Baby Scrape my Data. Battle Tapes: Valkyrie, If Only, Back in the Game, and Solid Gold.</p>
+      <p>My current favorite artists are Machine Girl and Battle Tapes; some of my favorite songs from them: Machine Girl: Ignore the Vore, Kill Screen, Necro Culture Vulture, Black Glass, and Come on Baby Scrape my Data. Battle Tapes: Valkyrie, If Only, Back in the Game, and Solid Gold.
+      </p>
     </div>
   </div>
 
@@ -207,12 +194,12 @@
     <img src="WSScreen/Dogs.png" alt="MGD" />
     <img src="WSScreen/Texture.png" alt="BTT" />
     <img src="WSScreen/Valkyrie.png" alt="BTV" />
-</div>
+  </div>
 
   <div id="float-buttons">
-  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
-  <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
-</div>
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
+    <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
+  </div>
 
   <footer>
     <p>&copy; 2025 Aidrin Morris</p>

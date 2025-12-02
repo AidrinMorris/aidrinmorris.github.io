@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Aidrin Morris - Page 3</title>
 
 <!-- Google Font -->
@@ -15,21 +16,22 @@
     --spacing-small: 0.625rem;
     --spacing-medium: 1rem;
     --spacing-large: 2rem;
+    --font-size-large: 1.2em;
     --border-radius-small: 0.25rem;
-    --border-radius-medium: 0.5rem;
-    --border-radius-large: 1rem;
+    --border-radius-medium: 0.625rem;
     --border-thickness: 0.125rem;
-    --font-size-heading: 1em;
-    --vw: 1vw;
-    --vh: 1vh;
+    --max-width-box: 40rem;
+    --min-width-box: 18.75rem;
+    --max-img-height: 15rem;
   }
 
   body {
     display: flex;
     flex-direction: column;
+    width: 100%;
     min-height: 100vh;
     margin: 0;
-    font-family: 'Roboto Slab', Arial, sans-serif; /* Using Google Font */
+    font-family: 'Roboto Slab', Arial, sans-serif;
     background-color: #404040;
     font-size: 1rem;
   }
@@ -61,7 +63,7 @@
     background-color: #808080;
   }
 
-  /* Main content styles */
+  /* Main content container */
   .content {
     flex: 1;
     max-width: 90%;
@@ -89,20 +91,22 @@
     margin: 0 0 var(--spacing-medium) 0;
   }
 
+  /* Style for styled boxes around text content */
   .text-box {
     background-color: #666;
     padding: var(--spacing-large);
     border-radius: var(--border-radius-large);
     border: var(--border-thickness) solid #808080;
-    font-size: 1.2em;
+    font-size: var(--font-size-large);
     line-height: 1.5;
     color: #f0f0f0;
-    max-width: 40em;
-    width: calc(40em);
+    max-width: var(--max-width-box);
+    width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
   }
 
+  /* Responsive images */
   .responsive-img {
     display: block;
     margin: var(--spacing-large) auto;
@@ -121,13 +125,14 @@
   /* Footer style */
   footer {
     background-color: rgb(59, 57, 57);
-    color: white;
+    color: #fff;
     text-align: center;
     padding: var(--spacing-small);
     margin-top: var(--spacing-large);
+    width: 100% !important;
   }
 
-     /* Floating buttons container styles */
+  /* Floating buttons container styles */
   #float-buttons {
     position: fixed;
     top: 50%;
@@ -154,16 +159,19 @@
     background-color: #777;
   }
 
-  @media(max-width: 1200px){
-    body {
-      font-size: 0.95rem;
-    }
-  }
+  /* Responsive adjustments for mobile/ tablets */
 
-  @media(max-width: 992px){
-    body {
-      font-size: 0.9rem;
+  @media(max-width: 768px){
+    /* Stack nav vertically */
+    nav {
+      flex-direction: column;
+      align-items: center;
     }
+    nav a {
+      width: 80%;
+      text-align: center;
+    }
+    /* Stack content vertically and adjust text-box width */
     .side-by-side {
       flex-direction: column;
       align-items: center;
@@ -171,18 +179,7 @@
     .text-box {
       min-width: 80%;
     }
-    .responsive-img {
-      max-width: 90vw;
-    }
-    .NGE, .GitS {
-      max-width: 50vw;
-    }
-  }
-
-  @media(max-width: 768px){
-    body {
-      font-size: 0.85rem;
-    }
+    /* Responsive images */
     .responsive-img {
       max-width: 90vw;
     }
@@ -192,18 +189,24 @@
     body {
       font-size: 0.8rem;
     }
+    /* Further reduce font size and image sizes if needed */
+    .text-box {
+      font-size: 1em;
+    }
     .responsive-img {
       max-width: 70vw;
     }
   }
 
-  /* Large screens */
+  /* Larger screens */
   @media(min-width: 1200px){
     body {
       font-size: 1.1rem;
     }
+    .text-box {
+      font-size: 1.3em;
+    }
   }
-
 </style>
 </head>
 <body>
@@ -221,7 +224,6 @@
       <h2>My MTG &amp; D&amp;D</h2>
       
       <div class="side-by-side" style="flex-wrap: wrap; justify-content: center;">
-        
         <div class="text-box" style="background-color:#2E7D32;">
           <h1>Magic: The Gathering and D&amp;D</h1>
           <p>I've played <strong>D&amp;D</strong> for a long time, but I'm newer to <strong>MTG</strong>. I started playing <strong>D&amp;D</strong> around six years ago and <strong>MTG</strong> a little under a year and a half ago. A couple of my lower classmate friends graduated this year and have since moved away for college reasons. So it's just me and three other friends. I do still keep in touch with the people who have moved away. Our remaining group hasn't bothered to start up another campaign because of conflicting times, so we can only really play <strong>MTG</strong> as it's more of a mobile game.</p>
@@ -231,7 +233,6 @@
           <p>If you want more information on the formats you can go to the official <strong>Wizards of the Coast</strong> website.</p>
           <p>Website Link: <a href="https://magic.wizards.com/en/formats" target="_blank" rel="noopener noreferrer"><strong>Wizards of the Coast format information</strong></a></p>
         </div>
-        
         <div class="text-box" style="background-color:#2E7D32;">
           <h1>My favorite <strong>D&amp;D</strong> character</h1>
           <p>I have lots of <strong>D&amp;D</strong> characters so I will just pick out my favorite character.</p>
@@ -241,24 +242,19 @@
           <p>The story was cut short due to timing issues and graduations, so I never got to see the end of Apharachath, but I'm planning on writing out her entire story eventually.</p>
         </div>
       </div>
-
       <img src="WSScreen/MyMTG.png" alt="My MTG Phyrexian Collection" class="responsive-img" />
       <img src="WSScreen/DnD.png" alt="D&amp;D Screenshot" class="responsive-img" />
-      
       <div class="text-box centered-box" style="background-color:#2E7D32;">
         <h1>Custom MTG</h1>
         <p>I make custom <strong>MTG</strong> cards and have been for a while. I make customs out of anything I find interesting enough or from media I make. From <strong>Elden Ring</strong> to <strong>Knights of Sidonia,</strong> I have few limits. One of my friends also enjoys making custom cards; we were working together on making mockup sets, or what-if sets, for <strong>Elden Ring.</strong></p>
       </div>
-      
       <img src="WSScreen/MagicCard.png" alt="Magic Card Screenshot" class="responsive-img" />
     </section>
   </div>
-  
   <div id="float-buttons">
-  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
-  <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
-</div>
-
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
+    <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
+  </div>
   <footer>
     <p>&copy; 2025 Aidrin Morris</p>
   </footer>

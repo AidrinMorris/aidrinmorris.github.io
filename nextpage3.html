@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Aidrin Morris - Page 3</title>
 
 <!-- Google Font -->
@@ -28,10 +29,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 100%;
     min-height: 100vh;
     margin: 0;
-    font-family: 'Roboto Slab', Arial, sans-serif; /* Using Google Font */
+    font-family: 'Roboto Slab', Arial, sans-serif;
     background-color: #404040;
   }
 
@@ -41,6 +41,7 @@
     display: flex;
     justify-content: center;
     gap: var(--spacing-medium);
+    flex-wrap: wrap; /* allow wrapping on small screens */
   }
 
   nav a {
@@ -102,7 +103,7 @@
     border-radius: var(--border-radius-medium);
   }
 
-   /* Floating buttons container styles */
+  /* Floating buttons container styles */
   #float-buttons {
     position: fixed;
     top: 50%;
@@ -138,8 +139,9 @@
     margin-top: var(--spacing-large);
     width: 100% !important;
     max-width: 100% !important;
-    position: relative;
   }
+
+  /* Media queries for responsiveness */
 
   @media(max-width: 768px) {
     .side-by-side {
@@ -151,37 +153,15 @@
     }
   }
 
-  /* Large screens */
-  @media(min-width: 1200px) {
-    body {
-      max-width: none;
-      margin: 0;
-    }
-    nav {
-      justify-content: center;
-    }
-    .text-box {
-      font-size: 1.3em;
-    }
-  }
-
-  /* Medium screens */
   @media(max-width: 1024px) and (min-width: 769px) {
     body {
       padding: 0 2rem;
     }
-    .side-by-side {
-      flex-direction: row;
-    }
     .text-box {
       min-width: 45%;
     }
-    .image-row {
-      flex-direction: row;
-    }
   }
 
-  /* Small screens */
   @media(max-width: 480px) {
     nav {
       flex-direction: column;
@@ -202,6 +182,18 @@
     }
   }
 
+  @media(min-width: 1200px) {
+    body {
+      max-width: none;
+      margin: 0;
+    }
+    nav {
+      justify-content: center;
+    }
+    .text-box {
+      font-size: 1.3em;
+    }
+  }
 </style>
 </head>
 <body>
@@ -214,7 +206,6 @@
   </nav>
   <div class="side-by-side">
     <div class="text-box">
-
       <h1>What do I Collect?</h1>
       <p>I love collecting old things, new things, anythings! I don't have a set list of things I collect. It could be car parts, art, books, clothes, games, and the list goes on. (I even have demo songs from multiple different artists that weren't released.) Might be a little bit of a hoarder, but I don't collect trash at least.</p>
       <p>Some of my favorite things in my miscellaneous collection have got to be either my old car parts or my "scrap." (It's not really scrap, I just don't know what to class it under.) It's bottlecaps and things like that.</p>
@@ -235,13 +226,12 @@
   </div>
   
   <div id="float-buttons">
-  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
-  <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
-</div>
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
+    <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
+  </div>
 
   <footer>
     <p>&copy; 2025 Aidrin Morris</p>
   </footer>
-
 </body>
 </html>

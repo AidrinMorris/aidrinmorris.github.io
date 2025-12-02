@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Aidrin Morris's About Me Website - Page 1</title>
 
 <!-- Google Font -->
@@ -29,6 +30,7 @@
     margin: 0;
     font-family: 'Roboto Slab', Arial, sans-serif;
     background-color: forestgreen;
+    font-size: 1rem; /* base font size */
   }
 
   /* Header styles */
@@ -70,7 +72,7 @@
     background-color: #808080;
   }
 
-  /* Wrapper for the main section to create secondary background */
+  /* Wrapper for the main section, create secondary background */
   .main-section-wrapper {
     background-color: #444;
     padding: 1rem;
@@ -78,7 +80,6 @@
     max-width: 70%;
     border-radius: var(--border-radius-large);
     box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.2);
-    flex: 1;
   }
 
   /* Main content styles with grid layout */
@@ -93,10 +94,31 @@
     flex: 1;
   }
 
-  /* Grid items stack on smaller screens */
-  @media (max-width: 768px) {
+  /* Adjust layout for smaller screens */
+  @media(max-width: 768px){
     .main-content {
-      grid-template-columns: 1fr 3fr;
+      grid-template-columns: 1fr; /* stack columns */
+    }
+    body {
+      font-size: 1rem; /* consistent base size on small screens */
+    }
+    nav {
+      flex-direction: column;
+      padding: 0;
+    }
+    nav a {
+      width: 100%;
+      margin: 0.5em 0;
+      text-align: center;
+    }
+    /* Make images responsive on small screens */
+    .image-gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+    .image-gallery img {
+      max-width: 80%;
+      margin: 1em 0;
     }
   }
 
@@ -109,7 +131,7 @@
     align-items: center;
   }
 
-  /* Specific image styles */
+  /* General image styling */
   .image-gallery img {
     max-width: none;
     width: auto;
@@ -119,36 +141,52 @@
     flex: 9.375rem;
   }
 
-  /* Styles for the individual description sections */
-  .description-section-1,
-  .description-section-2 {
-    background-color: #666;
-    padding: 1.25rem;
-    border-radius: var(--border-radius-large);
-    font-size: 1rem;
-    color: #f0f0f0;
-    width: 100%;
-    max-width: 50rem;
-    box-sizing: border-box;
-    margin-bottom: 1em;
+  /* Specific max-width classes for certain images */
+  .wss1 { max-width: 20em; }
+  .wss2 { max-width: 30em; }
+  .wss3 { max-width: 40em; }
+  .NGE { max-width: 20vw; }
+  .GitS { max-width: 20vw; }
+
+  /* Responsive font size adjustments */
+  @media(max-width: 480px){
+    body {
+      font-size: 0.8rem;
+    }
+    /* Text sections inside styled box */
+    .description-section-1,
+    .description-section-2 {
+      font-size: 0.8rem;
+      line-height: 1.3;
+      padding: 0.75rem;
+    }
+    .image-gallery img {
+      max-width: 70%;
+    }
   }
 
-  /* Footer style */
-  footer p {
+  @media(min-width: 1200px){
+    body {
+      font-size: 1.2rem;
+    }
+  }
+
+  /* Footer styles */
+  footer {
     background-color: rgb(59, 57, 57);
-    color: white !important;
+    color: #fff;
     text-align: center;
     padding: var(--spacing-medium);
     margin-top: var(--spacing-large);
   }
 
-  /* Style for the icon link in footer (optional) */
+  /* Style for footer links */
   footer a {
-    color: white;
+    color: #fff;
     text-decoration: none;
   }
 
-  /* Floating buttons container styles */
+  /* Floating buttons styles */
   #float-buttons {
     position: fixed;
     top: 50%;
@@ -159,7 +197,6 @@
     gap: 0.5em;
     z-index: 9999;
   }
-
   #float-buttons button {
     padding: 0.5em 1em;
     font-size: 0.9em;
@@ -170,62 +207,20 @@
     color: #fff;
     transition: background-color 0.3s;
   }
-
   #float-buttons button:hover {
     background-color: #777;
   }
 
-  @media(max-width: 768px){
-    body {
-      align-items: stretch;
-    }
-    .image-gallery {
-      flex-direction: column;
-    }
-    .image-gallery img {
-      max-width: 80%;
-    }
-    nav {
-      flex-direction: column;
-      align-items: center;
-    }
-    nav a {
-      width: 80%;
-      text-align: center;
-    }
-  }
-  @media(max-width: 480px){
-    .image-gallery img {
-      max-width: 70%;
-    }
-    .description-section-1,
-    .description-section-2 {
-      font-size: 0.8rem;
-      line-height: 1.3;
-      padding: 0.75rem;
-    }
-  }
-  @media(min-width: 1200px){
-    body {
-      font-size: 1.2rem;
-    }
-  }
-  /* Small screens */
-  @media(max-width: 320px){
-    body {
-      font-size: 0.75rem;
-    }
-    .description-section-1,
-    .description-section-2 {
-      font-size: 0.7rem;
-      padding: 0.5rem;
-    }
-    .image-gallery img {
-      max-width: 50%;
-    }
+  /* Additional style for a box around text sections */
+  .text-box {
+    background-color: #9c9a9a;
+    border: 2px solid #333;
+    border-radius: var(--border-radius-large);
+    padding: 1rem;
+    margin-bottom: 1em;
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.3);
   }
 
-  /* Remove bottom margin from paragraphs inside the sections to tighten spacing */
   .description-section-1 p,
   .description-section-2 p {
     margin-bottom: 0;
@@ -246,7 +241,7 @@
   <a href="nextpage4.html">Music</a>
 </nav>
 
-<!-- Wrapper for the main section to add secondary background -->
+<!-- Wrapper for the main section for secondary background -->
 <div class="main-section-wrapper">
   <div class="main-content">
     <!-- Image gallery -->
@@ -256,36 +251,42 @@
       <img src="WSScreen/UpdatedPic.png" alt="Newer picture of Aidrin Morris" class="small-img" />
     </div>
 
-    <!-- First description section -->
-    <div class="description-section-1">
-      <p>My name is Aidrin Morris, I'm working towards becoming a tech support
-         specialist. I've kind of fallen off the technical train and have been thinking
-         of switching up to something different, but am currently torn on what. I've
-         been doing online school as I live in the middle of nowhere and the nearest
-         campus is over two hours away. (The picture of me in glasses was taken on a
-         flip phone and then upscaled.)</p>
-      <p>I have lots of hobbies and would call myself a jack of all trades in a sense.
-         I'll do practically anything. Here's an uncompleted list of things I do.</p>
+    <!-- Description section, additional box -->
+    <div class="text-box">
+      <div class="description-section-1">
+        <p>My name is Aidrin Morris, I'm working towards becoming a tech support
+           specialist. I've kind of fallen off the technical train and have been thinking
+           of switching up to something different, but am currently torn on what. I've
+           been doing online school as I live in the middle of nowhere and the nearest
+           campus is over two hours away. (The picture of me in glasses was taken on a
+           flip phone and then upscaled.)</p>
+        <p>I have lots of hobbies and would call myself a jack of all trades in a sense.
+           I'll do practically anything. Here's an uncompleted list of things I do.</p>
+      </div>
     </div>
 
-    <!-- Second description section -->
-    <div class="description-section-2">
-      <h2>Some of the things I like to do:</h2>
-      <p>I love the creative arts. I make music, write my own stories, and paint/draw.</p>
-      <p>I collect old things, either by metal detecting or antiquing.</p>
-      <p>I build my own computers, I have built three so far. Working on a fourth.</p>
-      <p>I love listening to music. I listen to practically everything, from digital hardcore to jazz.</p>
-      <p>I like to watch and read anime/manga in my free time. Some of my favorite anime/manga are <strong>Knights of Sidonia,</strong> <strong>Neon Genesis Evangelion,</strong> and <strong>Ghost in the Shell.</strong></p>
-      <p>I enjoy playing <strong>Magic: The Gathering</strong> and <strong>Dungeons & Dragons</strong> with my friends.
-         The high school I went to has game nights on Monday, which I attend regularly.
-         I also make custom <strong>MTG</strong> cards.</p>
-      <p>I love driving and working on cars. If the gas and car/part prices weren't so high,
-         I would drive and work on cars more often.</p>
+    <!-- Second description section, additional box -->
+    <div class="text-box">
+      <div class="description-section-2">
+        <h2>Some of the things I like to do:</h2>
+        <p>I love the creative arts. I make music, write my own stories, and paint/draw.</p>
+        <p>I collect old things, either by metal detecting or antiquing.</p>
+        <p>I build my own computers, I have built three so far. Working on a fourth.</p>
+        <p>I love listening to music. I listen to practically everything, from digital hardcore to jazz.</p>
+        <p>I like to watch and read anime/manga in my free time. Some of my favorite anime/manga are <strong>Knights of Sidonia,</strong> <strong>Neon Genesis Evangelion,</strong> and <strong>Ghost in the Shell.</strong></p>
+        <p>I enjoy playing <strong>Magic: The Gathering</strong> and <strong>Dungeons & Dragons</strong> with my friends.
+           The high school I went to has game nights on Monday, which I attend regularly.
+           I also make custom <strong>MTG</strong> cards.</p>
+        <p>I love driving and working on cars. If the gas and car/part prices weren't so high,
+           I would drive and work on cars more often.</p>
+      </div>
     </div>
 
-    <!-- My info section -->
-    <div class="description-section-2">
-      <p>I'm pretty shy, but I'm trying to push myself to talk to more people. Living in the middle of nowhere doesn't help though, so I usually do everything online. If you maybe wanted to talk to me about anything I mainly use <strong>Discord</strong>. My username is tizerofthesanann or my id: 1253912376588107868. (tizerofthesanann is a name I came up where I used to work.)</p>
+    <!-- My info section, additional box -->
+    <div class="text-box">
+      <div class="description-section-2">
+        <p>I'm pretty shy, but I'm trying to push myself to talk to more people. Living in the middle of nowhere doesn't help though, so I usually do everything online. If you maybe wanted to talk to me about anything I mainly use <strong>Discord</strong>. My username is tizerofthesanann or my id: 1253912376588107868. (tizerofthesanann is a name I came up where I used to work.)</p>
+      </div>
     </div>
   </div>
 </div>
@@ -294,7 +295,7 @@
   <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
   <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
 </div>
-
+<!-- My Github profile -->
 <footer>
   <p>&copy; 2025 Aidrin Morris | <a href="https://github.com/aidrinmorris" target="_blank"><i class="fab fa-github"></i> My GitHub</a></p>
 </footer>
