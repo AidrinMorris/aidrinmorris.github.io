@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,7 +69,7 @@
       background-color: #808080;
     }
 
-    /* Content container styles */
+    /* Content styles */
     .grid-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -81,14 +82,14 @@
     .content-block {
       background-color: #2E7D32;
       padding: var(--spacing-large);
-      border-radius: var(--border-radius-medium);
+      border-radius: 0.625;
       border: var(--border-thickness) solid #808080;
       font-size: var(--font-size-large);
       line-height: 1.5;
       color: #f0f0f0;
     }
 
-    /* Image row styles */
+    /* Image styles */
     .image-row {
       display: flex;
       gap: var(--spacing-medium);
@@ -99,7 +100,6 @@
       border-radius: var(--border-radius-medium);
     }
 
-    /* Responsive images */
     img {
       max-width: 100%;
       max-height: var(--max-img-height);
@@ -110,13 +110,6 @@
     .white-link {
       color: white;
     }
-
-    /* Max-width classes for images */
-    .wss1 { max-width: 20em; }
-    .wss2 { max-width: 30em; }
-    .wss3 { max-width: 40em; }
-    .NGE { max-width: 20vw; }
-    .GitS { max-width: 20vw; }
 
     /* Floating buttons container styles */
     #float-buttons {
@@ -153,9 +146,11 @@
       text-align: center;
       padding: var(--spacing-small);
       margin-top: var(--spacing-large);
+      width: 100% !important;
+      max-width: 100% !important;
     }
 
-    /* Media Queries for responsiveness */
+    /* Media Queries */
     @media(max-width: 48rem) {
       body {
         align-items: stretch;
@@ -189,17 +184,17 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Navigation -->
   <nav>
     <a href="index.html">Intro</a>
     <a href="nextpage.html">Manga/Anime</a>
     <a href="nextpage2.html">MTG and D&D</a>
-    <a href="nextpage3.html" class="current">Collection</a>
-    <a href="nextpage4.html">Music</a>
+    <a href="nextpage3.html">Collection</a>
+    <a href="nextpage4.html" class="current">Music</a>
   </nav>
 
-  <!-- Main Content -->
   <div class="grid-container">
     <div class="content-block">
       <h1>What Kind of Music do I listen to?</h1>
@@ -250,4 +245,5 @@
     <p>&copy; 2025 Aidrin Morris</p>
   </footer>
 </body>
+
 </html>
