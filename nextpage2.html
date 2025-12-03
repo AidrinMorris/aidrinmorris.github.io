@@ -30,7 +30,7 @@
       box-sizing: border-box;
     }
 
-    /* Layout styles */
+    /* Layout styles for the body */
     body {
       display: flex;
       flex-direction: column;
@@ -42,7 +42,7 @@
       font-size: 1rem;
     }
 
-    /* Navigation styles */
+    /* Navigation bar styles */
     nav {
       background-color: rgb(59, 57, 57);
       padding: var(--spacing-medium);
@@ -147,7 +147,7 @@
       max-width: 20vw;
     }
 
-    /* Media Queries */
+    /* Media Queries for mobile devices */
     @media(max-width: 48rem) {
       nav {
         flex-direction: column;
@@ -237,16 +237,16 @@
 </head>
 
 <body>
-  <!-- Navigation -->
+  <!-- Navigation menu -->
   <nav>
     <a href="index.html">Intro</a>
     <a href="nextpage.html">Manga/Anime</a>
-    <a href="nextpage2.html" class="current">MTG and D&amp;D</a>
+    <a href="nextpage2.html" class="current">MTG and D&D</a>
     <a href="nextpage3.html">Collection</a>
     <a href="nextpage4.html">Music</a>
   </nav>
 
-  <!-- Main Content -->
+  <!-- Main Content section -->
   <div class="content">
     <section>
       <h2>My MTG &amp; D&amp;D</h2>
@@ -299,7 +299,7 @@
             but I'm planning on writing out her entire story eventually.</p>
         </div>
       </div>
-      <!-- Images -->
+      <!-- MTG and DND images -->
       <img src="WSScreen/MyMTG.png" alt="WotC" class="responsive-img" />
       <img src="WSScreen/DnD.png" alt="WotC" class="responsive-img" />
       <div class="text-box centered-box" style="background-color:#2E7D32;">
@@ -308,7 +308,8 @@
           interesting enough or from media I make. From <strong>Elden Ring</strong> to <strong>Knights of
             Sidonia,</strong> I have few limits. One of my friends also enjoys making custom cards; we were working
           together on making mockup sets, or what-if sets, for <strong>Elden Ring.</strong></p>
-      </div>
+      </div> 
+      <!-- MTG card image -->
       <img src="WSScreen/MagicCard.png" alt="WotC" class="responsive-img" />
     </section>
   </div>
@@ -319,7 +320,7 @@
     <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
   </div>
 
-  <!-- Footer -->
+  <!-- Footer section -->
   <footer>
     <p>&copy; 2025 Aidrin Morris</p>
   </footer>

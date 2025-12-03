@@ -30,7 +30,7 @@
       box-sizing: border-box;
     }
 
-    /* Layout styles */
+    /* Layout styles for the body */
     body {
       display: flex;
       flex-direction: column;
@@ -41,7 +41,7 @@
       background-color: #404040;
     }
 
-    /* Navigation Styles */
+    /* Navigation bar Styles */
     nav {
       background-color: rgb(59, 57, 57);
       padding: var(--spacing-medium);
@@ -171,7 +171,7 @@
       margin-top: var(--spacing-large);
     }
 
-    /* Media queries */
+    /* Media queries for mobile devices */
     @media(max-width: 48rem) {
       .side-by-side {
         flex-direction: column;
@@ -235,7 +235,7 @@
 </head>
 
 <body>
-  <!-- Navigation -->
+  <!-- Navigation section -->
   <nav>
     <a href="index.html">Intro</a>
     <a href="nextpage.html">Manga/Anime</a>
@@ -244,7 +244,7 @@
     <a href="nextpage4.html">Music</a>
   </nav>
 
-  <!-- Main Content -->
+  <!-- Main Content section -->
   <div class="content">
     <div class="side-by-side">
       <div class="text-box">
@@ -274,7 +274,7 @@
       </div>
     </div>
 
-    <!-- Images -->
+    <!-- My collection images -->
     <div class="image-row">
       <img src="WSScreen/CarParts.png" alt="Collection" />
       <img src="WSScreen/AT&T.png" alt="Collection" />
@@ -290,7 +290,7 @@
     <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
   </div>
 
-  <!-- Footer -->
+  <!-- Footer section -->
   <footer>
     <p>&copy; 2025 Aidrin Morris</p>
   </footer>

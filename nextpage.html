@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
+    /* Define CSS variables for consistent spacing, radius, and sizes */
     :root {
       --spacing-small: 0.625rem;
       --spacing-medium: 1rem;
@@ -25,12 +26,12 @@
       --vw: 1vw;
       --vh: 1vh;
     }
-
+    /* Use border-box for all elements for easier sizing */
     * {
       box-sizing: border-box;
     }
 
-    /* Layout styles */
+    /* Layout styles for the body section */
     body {
       display: flex;
       flex-direction: column;
@@ -41,7 +42,7 @@
       font-size: 1rem;
     }
 
-    /* Navigation styles */
+    /* Navigation bar styles */
     nav {
       background-color: rgb(59, 57, 57);
       padding: var(--spacing-medium);
@@ -49,7 +50,7 @@
       justify-content: center;
       gap: var(--spacing-medium);
     }
-
+    /* Styles for the links inside nav */
     nav a {
       color: #fff;
       text-decoration: none;
@@ -59,17 +60,17 @@
       border: var(--border-thickness) solid transparent;
       transition: background-color 0.3s, border-color 0.3s;
     }
-
+    /* Hover effect for nav links */
     nav a:hover {
       background-color: #606060;
     }
-
+    /* Style for the current/active nav link */
     nav a.current {
       border-color: #fff;
       background-color: #808080;
     }
 
-    /* Main content styles */
+    /* Main content container styles */
     .content {
       flex: 1;
       max-width: 90%;
@@ -79,20 +80,20 @@
       flex-direction: column;
       gap: var(--spacing-large);
     }
-
+    /* Styles for each section */
     section {
       padding: var(--spacing-medium);
       background: #2E7D32;
       border-radius: var(--border-radius-large);
       box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
     }
-
+    /* Heading styles inside sections */
     h2 {
       margin-top: 0;
       color: #fff;
       text-align: center;
     }
-
+    /* Paragraph styles inside sections */
     p {
       font-size: 1rem;
       line-height: 1.4;
@@ -102,7 +103,7 @@
       border-radius: 0.3em;
       color: #fff;
     }
-
+    /* Link with white color */
     .white-link {
       color: white;
     }
@@ -137,7 +138,7 @@
       max-width: 20vw;
     }
 
-    /* Media queries */
+    /* Media queries for mobile devices */
     @media(max-width: 75rem) {
       body {
         font-size: 0.95rem;
@@ -207,7 +208,7 @@
       padding: var(--spacing-small);
       margin-top: var(--spacing-large);
     }
-
+    /* Footer link styles */
     footer a {
       color: #fff;
       text-decoration: none;
@@ -225,7 +226,7 @@
       z-index: 9999;
       opacity: 0.7;
     }
-
+    /* Styles for buttons inside floating buttons */
     #float-buttons button {
       padding: 0.5em 1em;
       font-size: 0.9em;
@@ -236,7 +237,7 @@
       color: #fff;
       transition: background-color 0.3s;
     }
-
+    /* Hover effect for floating buttons */
     #float-buttons button:hover {
       background-color: #777;
     }
@@ -245,7 +246,7 @@
 
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation menu -->
   <nav>
     <a href="index.html">Intro</a>
     <a href="nextpage.html" class="current">Manga/Anime</a>
@@ -254,7 +255,7 @@
     <a href="nextpage4.html">Music</a>
   </nav>
 
-  <!-- Main Content -->
+  <!-- Main Content Section -->
   <div class="content">
 
     <section>
@@ -278,7 +279,7 @@
     <section>
       <h2>Gauna Images</h2>
       <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
-        <!-- Images -->
+        <!-- Gauna Images -->
         <img src="WSScreen/Screenshot 2025-10-24 170314.png" alt="Gauna Image" class="wss1" />
         <img src="WSScreen/Screenshot 2025-10-24 170406.png" alt="Gauna Image" class="wss2" />
         <img src="WSScreen/Screenshot 2025-10-24 170535.png" alt="Gauna Image" class="wss3" />
@@ -293,6 +294,7 @@
         is a very good anime. I also make custom <strong>Magic: The Gathering</strong> cards around these anime/manga,
         and sometimes <strong>D&D</strong> characters based on them.</p>
       <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
+        <!-- Other anime images -->
         <img src="WSScreen/NGE.png" alt="NGE" class="NGE" style="width:100%; height:auto;">
         <img src="WSScreen/GitS.png" alt="GitS" class="GitS" style="width:100%; height:auto;">
       </div>
@@ -305,7 +307,7 @@
     <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
   </div>
 
-  <!-- Footer -->
+  <!-- Footer section -->
   <footer>
     <p>&copy; 2025 Aidrin Morris</p>
   </footer>

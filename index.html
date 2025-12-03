@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
+    /* Define CSS variables for consistent spacing, border-radius, and font sizes */
     :root {
       --spacing-small: 0.625rem;
       --spacing-medium: 1rem;
@@ -23,12 +24,12 @@
       --border-thickness: 0.25em;
       --font-size-heading: 1.5rem;
     }
-
+    /* Apply box-sizing border-box to all elements for easier layout control */
     * {
       box-sizing: border-box;
     }
 
-    /* Layout styles */
+    /* Layout styles for the body */
     body {
       display: flex;
       flex-direction: column;
@@ -47,14 +48,14 @@
       text-align: center;
       color: white;
     }
-
+    /* Header title styling */
     header h1 {
       font-weight: bold;
       margin: 0;
       font-size: var(--font-size-heading);
     }
 
-    /* Navigation styles */
+    /* Navigation bar styles */
     nav {
       background-color: rgb(59, 57, 57);
       padding: var(--spacing-medium);
@@ -63,7 +64,7 @@
       justify-content: center;
       gap: var(--spacing-medium);
     }
-
+    /* Styles for navigation links */
     nav a {
       color: #fff;
       text-decoration: none;
@@ -73,17 +74,17 @@
       border: 0.125rem solid transparent;
       transition: background-color 0.3s, border-color 0.3s;
     }
-
+    /* Hover effect for side navigation links */
     nav a:hover {
       background-color: #606060;
     }
-
+    /* Styles for the active/current navigation link */
     nav a.current {
       border-color: #fff;
       background-color: #808080;
     }
 
-    /* Wrapper for the main section*/
+    /* Wrapper for the main section with secondary background and padding */
     .main-section-wrapper {
       background-color: #444;
       padding: 1rem;
@@ -93,7 +94,7 @@
       box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     }
 
-    /* Main content styles with grid layout */
+    /* Main content styles with CSS grid layout */
     .main-content {
       display: grid;
       grid-template-columns: 1fr 4fr;
@@ -105,7 +106,7 @@
       flex: 1;
     }
 
-    /* Image gallery styles */
+    /* Image gallery container styles */
     .image-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -114,7 +115,7 @@
       align-items: center;
     }
 
-    /* General image styling */
+    /* Styles for images within the gallery */
     .image-gallery img {
       max-width: none;
       width: auto;
@@ -145,7 +146,7 @@
       max-width: 20vw;
     }
 
-    /* Media queries */
+    /* Media queries for mobile devices */
     @media(max-width: 48rem) {
       .main-content {
         grid-template-columns: 1fr;
@@ -221,7 +222,7 @@
       z-index: 9999;
       opacity: 0.7;
     }
-
+    /* Button styles inside floating buttons container */
     #float-buttons button {
       padding: 0.5em 1em;
       font-size: 0.9em;
@@ -232,7 +233,7 @@
       color: #fff;
       transition: background-color 0.3s;
     }
-
+    /* Hover effect for floating buttons */
     #float-buttons button:hover {
       background-color: #777;
     }
@@ -246,7 +247,7 @@
       margin-bottom: 1em;
       box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
     }
-
+    /* Remove bottom margin for paragraphs inside description sections for cleaner layout */
     .description-section-1 p,
     .description-section-2 p {
       margin-bottom: 0;
@@ -260,7 +261,7 @@
     <h1>Who is Aidrin Morris?</h1>
   </header>
 
-  <!-- Navigation -->
+  <!-- Navigation menu for site sections -->
   <nav>
     <a href="index.html" class="current">Intro</a>
     <a href="nextpage.html">Manga/Anime</a>
@@ -280,7 +281,7 @@
         <img src="WSScreen/UpdatedPic.png" alt="Aidrin Morris" class="small-img" />
       </div>
 
-      <!-- Description section, additional box -->
+      <!-- Personal description section with styled box -->
       <div class="text-box">
         <div class="description-section-1">
           <p>My name is Aidrin Morris, I'm working towards becoming a tech support
@@ -294,7 +295,7 @@
         </div>
       </div>
 
-      <!-- Second description section, additional box -->
+      <!-- Second description section -->
       <div class="text-box">
         <div class="description-section-2">
           <h2>Some of the things I like to do:</h2>
@@ -314,7 +315,7 @@
         </div>
       </div>
 
-      <!-- My info section, additional box -->
+      <!-- My info section -->
       <div class="text-box">
         <div class="description-section-2">
           <p>I'm pretty shy, but I'm trying to push myself to talk to more people. Living in the middle of nowhere
