@@ -1,170 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aidrin Morris - Page 4</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aidrin Morris - Page 4</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-<style>
-  :root {
-    --spacing-small: 0.625rem;
-    --spacing-medium: 1rem;
-    --spacing-large: 2rem;
-    --font-size-large: 1.2em;
-    --border-radius-small: 0.25rem;
-    --border-radius-medium: 0.625rem;
-    --border-thickness: 0.125rem;
-    --max-img-height: 250px; /* set a max height for images for consistency */
-  }
+  <style>
+    :root {
+      --spacing-small: 0.625rem;
+      --spacing-medium: 1rem;
+      --spacing-large: 2rem;
+      --font-size-large: 1.2em;
+      --border-radius-small: 0.25rem;
+      --border-radius-medium: 0.625rem;
+      --border-thickness: 0.125rem;
+      --max-img-height: 250px;
+    }
 
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Roboto Slab', Arial, sans-serif;
-    background-color: #404040;
-    align-items: center;
-  }
-
-  nav {
-    background-color: rgb(59, 57, 57);
-    padding: var(--spacing-medium);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--spacing-medium);
-    width: 100%;
-  }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1.5);
-    border-radius: var(--border-radius-small);
-    border: 2px solid transparent;
-    transition: background-color 0.3s, border-color 0.3s;
-  }
-  nav a:hover {
-    background-color: #606060;
-  }
-  nav a.current {
-    border-color: #fff;
-    background-color: #808080;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-large);
-    width: 90%;
-    padding: var(--spacing-medium);
-    flex-grow: 1; /* allow it to grow if needed */
-  }
-
-  .content-block {
-    background-color: #2E7D32;
-    padding: var(--spacing-large);
-    border-radius: 10px;
-    border: var(--border-thickness) solid #808080;
-    font-size: var(--font-size-large);
-    line-height: 1.5;
-    color: #f0f0f0;
-  }
-
-  .image-row {
-    display: flex;
-    gap: var(--spacing-medium);
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #2E7D32;
-    padding: var(--spacing-medium);
-    border-radius: var(--border-radius-medium);
-  }
-
-  img {
-    max-width: 100%;
-    max-height: var(--max-img-height);
-    height: auto;
-    border-radius: var(--border-radius-medium);
-  }
-
-  /* Floating buttons container styles */
-  #float-buttons {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    z-index: 9999;
-  }
-
-  #float-buttons button {
-    padding: 0.5em 1em;
-    font-size: 0.9em;
-    cursor: pointer;
-    border: none;
-    border-radius: var(--border-radius-small);
-    background-color: #555;
-    color: #fff;
-    transition: background-color 0.3s;
-  }
-
-  #float-buttons button:hover {
-    background-color: #777;
-  }
-
-  /* Footer style */
-  footer {
-    background-color: rgb(59, 57, 57);
-    color: white;
-    text-align: center;
-    padding: var(--spacing-small);
-    margin-top: var(--spacing-large);
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Responsive adjustments */
-  @media(max-width: 768px) {
+    /* Layout styles */
     body {
-      align-items: stretch;
-    }
-    .grid-container {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media(max-width: 480px) {
-    nav {
+      display: flex;
       flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Roboto Slab', Arial, sans-serif;
+      background-color: #404040;
       align-items: center;
     }
-    nav a {
-      padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1);
-    }
-    .content-block {
-      font-size: 1em;
-    }
-  }
 
-  @media(min-width: 1200px) {
-    body {
-      max-width: none;
-      margin: 0;
+    /* Navigation styles */
+    nav {
+      background-color: rgb(59, 57, 57);
+      padding: var(--spacing-medium);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--spacing-medium);
+      width: 100%;
     }
-  }
-</style>
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1.5);
+      border-radius: var(--border-radius-small);
+      border: 2px solid transparent;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #606060;
+    }
+
+    nav a.current {
+      border-color: #fff;
+      background-color: #808080;
+    }
+
+    /* Content styles */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-large);
+      width: 90%;
+      padding: var(--spacing-medium);
+      flex-grow: 1;
+    }
+
+    .content-block {
+      background-color: #2E7D32;
+      padding: var(--spacing-large);
+      border-radius: 10px;
+      border: var(--border-thickness) solid #808080;
+      font-size: var(--font-size-large);
+      line-height: 1.5;
+      color: #f0f0f0;
+    }
+
+    /* Image styles */
+    .image-row {
+      display: flex;
+      gap: var(--spacing-medium);
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #2E7D32;
+      padding: var(--spacing-medium);
+      border-radius: var(--border-radius-medium);
+    }
+
+    img {
+      max-width: 100%;
+      max-height: var(--max-img-height);
+      height: auto;
+      border-radius: var(--border-radius-medium);
+    }
+
+    /* Floating buttons container styles */
+    #float-buttons {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      z-index: 9999;
+    }
+
+    #float-buttons button {
+      padding: 0.5em 1em;
+      font-size: 0.9em;
+      cursor: pointer;
+      border: none;
+      border-radius: var(--border-radius-small);
+      background-color: #555;
+      color: #fff;
+      transition: background-color 0.3s;
+    }
+
+    #float-buttons button:hover {
+      background-color: #777;
+    }
+
+    /* Footer style */
+    footer {
+      background-color: rgb(59, 57, 57);
+      color: white;
+      text-align: center;
+      padding: var(--spacing-small);
+      margin-top: var(--spacing-large);
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    /* Media Queries */
+    @media(max-width: 768px) {
+      body {
+        align-items: stretch;
+      }
+
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width: 480px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1);
+      }
+
+      .content-block {
+        font-size: 1em;
+      }
+    }
+
+    @media(min-width: 1200px) {
+      body {
+        max-width: none;
+        margin: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Navigation -->
   <nav>
     <a href="index.html">Intro</a>
     <a href="nextpage.html">Manga/Anime</a>
@@ -176,19 +189,33 @@
   <div class="grid-container">
     <div class="content-block">
       <h1>What Kind of Music do I listen to?</h1>
-      <p>As I said in the intro, I listen to everything. My favorite genres move around a lot, though; I call them “phases.” The current phase I'm in is the “EBM and Digital Hardcore phase.” The phase before this one was the “Pop and Breakcore phase.”</p>
-      <p>My introduction to music was through my grandpa. He listens to classic rock, so I listened to classic rock. My favorite classic rock artists are Journey, America, The Beatles, and Soundgarden. My music taste then soon shifted because of my mother. She listened to electronic, alternative rock, metal, and EBM. Some of the artists I listened to then were Mr. Kitty, Rammstein, And One, and Apoptygma Berzerk. The music I listen to now is much heavier than what I used to listen to. Artists like Machine Girl, Pixel Grip, ZOMB, awerewa, LustSickPuppy, and multiple others. Machine Girl is definitely my favorite artist right now.</p>
-      <p>My Spotify Profile:<a href="https://open.spotify.com/user/bqu3saml07mxooqll63i5j5n9?si=852ece2aa7254e2b" target="_blank" rel="noopener noreferrer">My Spotify</a></p>
+      <p>As I said in the intro, I listen to everything. My favorite genres move around a lot, though; I call them
+        “phases.” The current phase I'm in is the “EBM and Digital Hardcore phase.” The phase before this one was the
+        “Pop and Breakcore phase.”</p>
+      <p>My introduction to music was through my grandpa. He listens to classic rock, so I listened to classic rock. My
+        favorite classic rock artists are Journey, America, The Beatles, and Soundgarden. My music taste then soon
+        shifted because of my mother. She listened to electronic, alternative rock, metal, and EBM. Some of the artists
+        I listened to then were Mr. Kitty, Rammstein, And One, and Apoptygma Berzerk. The music I listen to now is much
+        heavier than what I used to listen to. Artists like Machine Girl, Pixel Grip, ZOMB, awerewa, LustSickPuppy, and
+        multiple others. Machine Girl is definitely my favorite artist right now.</p>
+      <p>My Spotify Profile:<a href="https://open.spotify.com/user/bqu3saml07mxooqll63i5j5n9?si=852ece2aa7254e2b"
+          target="_blank" rel="noopener noreferrer">My Spotify</a></p>
     </div>
     <div class="content-block">
       <h1>Some of my Favorite Songs</h1>
-      <p>I have lots of favorites, I've been working on a playlist on <strong>Spotify</strong> called "One of Everything." The playlist is a favorite song in every genre I listen to.</p>
-      <p>My current favorite artists are Machine Girl and Battle Tapes; some of my favorite songs from them: Machine Girl: Ignore the Vore, Kill Screen, Necro Culture Vulture, Black Glass, and Come on Baby Scrape my Data. Battle Tapes: Valkyrie, If Only, Back in the Game, and Solid Gold.</p>
+      <p>I have lots of favorites, I've been working on a playlist on <strong>Spotify</strong> called "One of
+        Everything." The playlist is a favorite song in every genre I listen to.</p>
+      <p>My current favorite artists are Machine Girl and Battle Tapes; some of my favorite songs from them: Machine
+        Girl: Ignore the Vore, Kill Screen, Necro Culture Vulture, Black Glass, and Come on Baby Scrape my Data. Battle
+        Tapes: Valkyrie, If Only, Back in the Game, and Solid Gold.</p>
       <h1>Update</h1>
-      <p>My taste in songs is taking another sudden turn from my sister using my Spotify account. My sister listens to more grungy music groups like Deftones and Nirvana. I've never been a real fan of Nirvana only a couple of songs, but Deftones I've never really thought I would enjoy. I've had that song Savory on repeat.</p>
+      <p>My taste in songs is taking another sudden turn from my sister using my Spotify account. My sister listens to
+        more grungy music groups like Deftones and Nirvana. I've never been a real fan of Nirvana only a couple of
+        songs I find alright, but Deftones I've never really thought I would enjoy. I've had the song Savory on repeat.</p>
     </div>
   </div>
 
+  <!-- Images -->
   <div class="image-row">
     <img src="WSScreen/Vore.png" alt="Spotify" />
     <img src="WSScreen/BlackGlass.png" alt="Spotify" />
@@ -197,13 +224,16 @@
     <img src="WSScreen/Valkyrie.png" alt="Spotify" />
   </div>
 
+  <!-- Floating Buttons -->
   <div id="float-buttons">
     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
     <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
   </div>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Aidrin Morris</p>
   </footer>
 </body>
+
 </html>

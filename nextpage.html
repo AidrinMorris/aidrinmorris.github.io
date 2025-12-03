@@ -1,264 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aidrin Morris - Page 2</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aidrin Morris - Page 2</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-<style>
-  :root {
-    /* Spacing and sizes */
-    --spacing-small: 0.625rem;
-    --spacing-medium: 1rem;
-    --spacing-large: 2rem;
-    --border-radius-small: 0.25rem;
-    --border-radius-medium: 0.5rem;
-    --border-radius-large: 1rem;
-    --border-thickness: 0.125rem;
-    --font-size-heading: 1em;
-    --vw: 1vw;
-    --vh: 1vh;
-  }
-
-  /* Layout styles */
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Roboto Slab', Arial, sans-serif;
-    background-color: rgb(53, 54, 53);
-    font-size: 1rem; /* base font size */
-  }
-
-  /* Navigation styles */
-  nav {
-    background-color: rgb(59, 57, 57);
-    padding: var(--spacing-medium);
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-medium);
-  }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1.5);
-    border-radius: var(--border-radius-small);
-    border: var(--border-thickness) solid transparent;
-    transition: background-color 0.3s, border-color 0.3s;
-  }
-  nav a:hover {
-    background-color: #606060;
-  }
-  nav a.current {
-    border-color: #fff;
-    background-color: #808080;
-  }
-
-  /* Main content styles */
-  .content {
-    flex: 1;
-    max-width: 90%;
-    margin: 0 auto;
-    padding: var(--spacing-large);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-large);
-  }
-
-  section {
-    padding: var(--spacing-medium);
-    background: #2E7D32;
-    border-radius: var(--border-radius-large);
-    box-shadow: 0 0 1em rgba(0,0,0,0.5);
-  }
-
-  h2 {
-    margin-top: 0;
-    color: #fff;
-    text-align: center;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 1em;
-    padding: 0.5em;
-    background: rgba(128, 128, 128, 0.2);
-    border-radius: 0.3em;
-    color: #fff;
-  }
-
-  /* Image sizing for all images, override in media queries */
-  img {
-    border-radius: 0.5rem;
-    display: block;
-    margin: auto;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .wss1 { max-width: 20em; }
-  .wss2 { max-width: 30em; }
-  .wss3 { max-width: 40em; }
-  .NGE { max-width: 20vw; }
-  .GitS { max-width: 20vw; }
-
-  /* Responsive size adjustments */
-  @media(max-width: 1200px){
-    body {
-      font-size: 0.95rem;
+  <style>
+    :root {
+      --spacing-small: 0.625rem;
+      --spacing-medium: 1rem;
+      --spacing-large: 2rem;
+      --border-radius-small: 0.25rem;
+      --border-radius-medium: 0.5rem;
+      --border-radius-large: 1rem;
+      --border-thickness: 0.125rem;
+      --font-size-heading: 1em;
+      --vw: 1vw;
+      --vh: 1vh;
     }
-  }
 
-  @media(max-width: 992px){
+    /* Layout styles */
     body {
-      font-size: 0.9rem;
-    }
-    nav {
+      display: flex;
       flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Roboto Slab', Arial, sans-serif;
+      background-color: rgb(53, 54, 53);
+      font-size: 1rem;
     }
-    img {
-      max-width: 80%;
-    }
-    .NGE, .GitS {
-      max-width: 50vw;
-    }
-  }
 
-  @media(max-width: 768px){
-    body {
-      font-size: 0.85rem;
-    }
+    /* Navigation styles */
     nav {
-      flex-direction: column;
-      align-items: stretch;
+      background-color: rgb(59, 57, 57);
+      padding: var(--spacing-medium);
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-medium);
     }
+
     nav a {
-      width: 100%;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1.5);
+      border-radius: var(--border-radius-small);
+      border: var(--border-thickness) solid transparent;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #606060;
+    }
+
+    nav a.current {
+      border-color: #fff;
+      background-color: #808080;
+    }
+
+    /* Main content styles */
+    .content {
+      flex: 1;
+      max-width: 90%;
+      margin: 0 auto;
+      padding: var(--spacing-large);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-large);
+    }
+
+    section {
+      padding: var(--spacing-medium);
+      background: #2E7D32;
+      border-radius: var(--border-radius-large);
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #fff;
       text-align: center;
-      padding: 1em;
     }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 1em;
+      padding: 0.5em;
+      background: rgba(128, 128, 128, 0.2);
+      border-radius: 0.3em;
+      color: #fff;
+    }
+
+    /* Image sizing for all images, override in media queries */
     img {
-      max-width: 70%;
+      border-radius: 0.5rem;
+      display: block;
+      margin: auto;
+      max-width: 100%;
+      height: auto;
     }
-    .NGE, .GitS {
-      max-width: 60vw;
+
+    /* Max-width classes for images */
+    .wss1 {
+      max-width: 20em;
     }
-  }
 
-  @media(max-width: 480px){
-    body {
-      font-size: 0.8rem;
+    .wss2 {
+      max-width: 30em;
     }
-  }
 
-  @media(min-width: 1200px){
-    body {
-      font-size: 1.1rem;
+    .wss3 {
+      max-width: 40em;
     }
-  }
 
-  /* Footer styles */
-  footer {
-    background-color: rgb(59, 57, 57);
-    color: #fff;
-    text-align: center;
-    padding: var(--spacing-small);
-    margin-top: var(--spacing-large);
-  }
+    .NGE {
+      max-width: 20vw;
+    }
 
-  /* Floating buttons styles */
-  #float-buttons {
-    position: fixed;
-    top: 50%;
-    right: 1.25rem;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    z-index: 9999;
-  }
-  #float-buttons button {
-    padding: 0.5em 1em;
-    font-size: 0.9em;
-    cursor: pointer;
-    border: none;
-    border-radius: var(--border-radius-small);
-    background-color: #555;
-    color: #fff;
-    transition: background-color 0.3s;
-  }
-  #float-buttons button:hover {
-    background-color: #777;
-  }
+    .GitS {
+      max-width: 20vw;
+    }
 
-</style>
+    /* Media queries */
+    @media(max-width: 1200px) {
+      body {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media(max-width: 992px) {
+      body {
+        font-size: 0.9rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      img {
+        max-width: 80%;
+      }
+
+      .NGE,
+      .GitS {
+        max-width: 50vw;
+      }
+    }
+
+    @media(max-width: 768px) {
+      body {
+        font-size: 0.85rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      nav a {
+        width: 100%;
+        text-align: center;
+        padding: 1em;
+      }
+
+      img {
+        max-width: 70%;
+      }
+
+      .NGE,
+      .GitS {
+        max-width: 60vw;
+      }
+    }
+
+    @media(max-width: 480px) {
+      body {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media(min-width: 1200px) {
+      body {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: rgb(59, 57, 57);
+      color: #fff;
+      text-align: center;
+      padding: var(--spacing-small);
+      margin-top: var(--spacing-large);
+    }
+
+    /* Floating buttons styles */
+    #float-buttons {
+      position: fixed;
+      top: 50%;
+      right: 1.25rem;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      z-index: 9999;
+    }
+
+    #float-buttons button {
+      padding: 0.5em 1em;
+      font-size: 0.9em;
+      cursor: pointer;
+      border: none;
+      border-radius: var(--border-radius-small);
+      background-color: #555;
+      color: #fff;
+      transition: background-color 0.3s;
+    }
+
+    #float-buttons button:hover {
+      background-color: #777;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Navigation -->
-<nav>
-  <a href="index.html">Intro</a>
-  <a href="nextpage.html" class="current">Manga/Anime</a>
-  <a href="nextpage2.html">MTG and D&amp;D</a>
-  <a href="nextpage3.html">Collection</a>
-  <a href="nextpage4.html">Music</a>
-</nav>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Intro</a>
+    <a href="nextpage.html" class="current">Manga/Anime</a>
+    <a href="nextpage2.html">MTG and D&amp;D</a>
+    <a href="nextpage3.html">Collection</a>
+    <a href="nextpage4.html">Music</a>
+  </nav>
 
-<!-- Content Sections -->
-<div class="content">
+  <!-- Content Sections -->
+  <div class="content">
 
-<section>
-<h2>My Favorite Manga/Anime</h2>
-<p>
-My favorite manga/anime is <strong>Knights of Sidonia</strong>. It is a fictional story set over a thousand years later in deep space, where Earth was destroyed by aliens called Gauna. I read the manga back in middle school, but recently refound the anime. I watched it then decided to get the manga that I read a long time ago.
-</p>
-<p>
-I'll include some screenshots of what the Gauna look like. They absorb organic matter to grow stronger and adapt to situations thrown at them.
-</p>
-<p>
-Learn more about the Gauna on the <a href="https://sidonia-no-kishi.fandom.com/wiki/Gauna" target="_blank" rel="noopener noreferrer">KoS Wiki</a>.
-</p>
-<img src="WSScreen/KoS.png" alt="Knights of Sidonia" class="kos-screenshot" />
-</section>
+    <section>
+      <h2>My Favorite Manga/Anime</h2>
+      <p>
+        My favorite manga/anime is <strong>Knights of Sidonia</strong>. It is a fictional story set over a thousand
+        years later in deep space, where Earth was destroyed by aliens called Gauna. I read the manga back in middle
+        school, but recently refound the anime. I watched it then decided to get the manga that I read a long time ago.
+      </p>
+      <p>
+        I'll include some screenshots of what the Gauna look like. They absorb organic matter to grow stronger and adapt
+        to situations thrown at them.
+      </p>
+      <p>
+        Learn more about the Gauna on the <a href="https://sidonia-no-kishi.fandom.com/wiki/Gauna" target="_blank"
+          rel="noopener noreferrer">KoS Wiki</a>.
+      </p>
+      <img src="WSScreen/KoS.png" alt="Knights of Sidonia" class="kos-screenshot" />
+    </section>
 
-<section>
-<h2>Gauna Images</h2>
-<div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
-  <img src="WSScreen/Screenshot 2025-10-24 170314.png" alt="Gauna Image" class="wss1" />
-  <img src="WSScreen/Screenshot 2025-10-24 170406.png" alt="Gauna Image" class="wss2" />
-  <img src="WSScreen/Screenshot 2025-10-24 170535.png" alt="Gauna Image" class="wss3" />
-</div>
-</section>
+    <section>
+      <h2>Gauna Images</h2>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
 
-<section>
-<h2>Other Favorite Manga/Anime</h2>
-<p>My other favorite anime/manga are <strong>Neon Genesis Evangelion</strong> and <strong>Ghost in the Shell</strong>. These have complex stories, deep themes, and impactful characters. <strong>Neon Genesis Evangelion</strong> is hard to follow so you need to look up some things. <strong>Ghost in the Shell</strong> is a very good anime. I also make custom <strong>Magic: The Gathering</strong> cards around these anime/manga, and sometimes <strong>D&D</strong> characters based on them.</p>
-<div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
-    <img src="WSScreen/NGE.png" alt="NGE" class="NGE" style="width:100%; height:auto;">
-    <img src="WSScreen/GitS.png" alt="GitS" class="GitS" style="width:100%; height:auto;">
-</div>
-</section>
-</div>
+        <!-- Images -->
+        <img src="WSScreen/Screenshot 2025-10-24 170314.png" alt="Gauna Image" class="wss1" />
+        <img src="WSScreen/Screenshot 2025-10-24 170406.png" alt="Gauna Image" class="wss2" />
+        <img src="WSScreen/Screenshot 2025-10-24 170535.png" alt="Gauna Image" class="wss3" />
+      </div>
+    </section>
 
-<!-- Floating Buttons always visible on the right -->
-<div id="float-buttons">
-  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
-  <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
-</div>
+    <section>
+      <h2>Other Favorite Manga/Anime</h2>
+      <p>My other favorite anime/manga are <strong>Neon Genesis Evangelion</strong> and <strong>Ghost in the
+          Shell</strong>. These have complex stories, deep themes, and impactful characters. <strong>Neon Genesis
+          Evangelion</strong> is hard to follow so you need to look up some things. <strong>Ghost in the Shell</strong>
+        is a very good anime. I also make custom <strong>Magic: The Gathering</strong> cards around these anime/manga,
+        and sometimes <strong>D&D</strong> characters based on them.</p>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
+        <img src="WSScreen/NGE.png" alt="NGE" class="NGE" style="width:100%; height:auto;">
+        <img src="WSScreen/GitS.png" alt="GitS" class="GitS" style="width:100%; height:auto;">
+      </div>
+    </section>
+  </div>
 
-<!-- Footer -->
-<footer>
-  <p>&copy; 2025 Aidrin Morris</p>
-</footer>
+  <!-- Floating Buttons always visible on the right -->
+  <div id="float-buttons">
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
+    <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Aidrin Morris</p>
+  </footer>
 
 </body>
+
 </html>

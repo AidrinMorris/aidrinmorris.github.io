@@ -1,202 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aidrin Morris - Page 3</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aidrin Morris - Page 3</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-<style>
-  :root {
-    --spacing-small: 0.625rem;
-    --spacing-medium: 1rem;
-    --spacing-large: 2rem;
-    --font-size-large: 1.2em;
-    --border-radius-small: 0.25rem;
-    --border-radius-medium: 0.625rem;
-    --border-thickness: 0.125rem;
-    --max-width-box: 40rem;
-    --min-width-box: 18.75rem;
-    --max-img-height: 15rem;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Roboto Slab', Arial, sans-serif;
-    background-color: #404040;
-  }
-
-  nav {
-    background-color: rgb(59, 57, 57);
-    padding: var(--spacing-medium);
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-medium);
-    flex-wrap: wrap; /* allow wrapping on small screens */
-  }
-
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1.5);
-    border-radius: var(--border-radius-small);
-    border: var(--border-thickness) solid transparent;
-    transition: background-color 0.3s, border-color 0.3s;
-  }
-
-  nav a:hover {
-    background-color: #606060;
-  }
-
-  nav a.current {
-    border-color: #fff;
-    background-color: #808080;
-  }
-
-  .side-by-side {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: var(--spacing-large);
-    flex-wrap: wrap;
-    padding: var(--spacing-large);
-  }
-
-  .text-box {
-    background-color: #2E7D32;
-    padding: var(--spacing-large);
-    border-radius: var(--border-radius-medium);
-    border: var(--border-thickness) solid #808080;
-    font-size: var(--font-size-large);
-    line-height: 1.5;
-    color: #f0f0f0;
-    max-width: var(--max-width-box);
-    flex: 1;
-    min-width: var(--min-width-box);
-    box-sizing: border-box;
-  }
-
-  .image-row {
-    display: flex;
-    gap: var(--spacing-medium);
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #2E7D32;
-    padding: var(--spacing-medium);
-    border-radius: var(--border-radius-medium);
-  }
-
-  img {
-    max-width: 100%;
-    max-height: var(--max-img-height);
-    height: auto;
-    border-radius: var(--border-radius-medium);
-  }
-
-  /* Floating buttons container styles */
-  #float-buttons {
-    position: fixed;
-    top: 50%;
-    right: 1.25rem;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    z-index: 9999;
-  }
-
-  #float-buttons button {
-    padding: 0.5em 1em;
-    font-size: 0.9em;
-    cursor: pointer;
-    border: none;
-    border-radius: var(--border-radius-small);
-    background-color: #555;
-    color: #fff;
-    transition: background-color 0.3s;
-  }
-
-  #float-buttons button:hover {
-    background-color: #777;
-  }
-
-  /* Footer style */
-  footer {
-    background-color: rgb(59, 57, 57);
-    color: white;
-    text-align: center;
-    padding: var(--spacing-small);
-    margin-top: var(--spacing-large);
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* Media queries for responsiveness */
-
-  @media(max-width: 768px) {
-    .side-by-side {
-      flex-direction: column;
-      align-items: center;
+  <style>
+    :root {
+      --spacing-small: 0.625rem;
+      --spacing-medium: 1rem;
+      --spacing-large: 2rem;
+      --font-size-large: 1.2em;
+      --border-radius-small: 0.25rem;
+      --border-radius-medium: 0.625rem;
+      --border-thickness: 0.125rem;
+      --max-width-box: 40rem;
+      --min-width-box: 18.75rem;
+      --max-img-height: 15rem;
     }
-    .text-box {
-      min-width: 80%;
-    }
-  }
 
-  @media(max-width: 1024px) and (min-width: 769px) {
+    /* Layout styles */
     body {
-      padding: 0 2rem;
-    }
-    .text-box {
-      min-width: 45%;
-    }
-  }
-
-  @media(max-width: 480px) {
-    nav {
+      display: flex;
       flex-direction: column;
-      align-items: center;
-    }
-    nav a {
-      padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1);
-    }
-    .side-by-side {
-      flex-direction: column;
-      align-items: center;
-    }
-    .text-box {
-      min-width: 80%;
-    }
-    .image-row {
-      flex-direction: column;
-    }
-  }
-
-  @media(min-width: 1200px) {
-    body {
-      max-width: none;
+      width: 100%;
+      min-height: 100vh;
       margin: 0;
+      font-family: 'Roboto Slab', Arial, sans-serif;
+      background-color: #404040;
     }
+
+    /* Navigation Styles */
     nav {
+      background-color: rgb(59, 57, 57);
+      padding: var(--spacing-medium);
+      display: flex;
       justify-content: center;
+      gap: var(--spacing-medium);
+      flex-wrap: wrap;
     }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1.5);
+      border-radius: var(--border-radius-small);
+      border: var(--border-thickness) solid transparent;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #606060;
+    }
+
+    nav a.current {
+      border-color: #fff;
+      background-color: #808080;
+    }
+
+    /* Content styles */
+    .side-by-side {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: var(--spacing-large);
+      flex-wrap: wrap;
+      padding: var(--spacing-large);
+    }
+
     .text-box {
-      font-size: 1.3em;
+      background-color: #2E7D32;
+      padding: var(--spacing-large);
+      border-radius: var(--border-radius-medium);
+      border: var(--border-thickness) solid #808080;
+      font-size: var(--font-size-large);
+      line-height: 1.5;
+      color: #f0f0f0;
+      max-width: var(--max-width-box);
+      flex: 1;
+      min-width: var(--min-width-box);
+      box-sizing: border-box;
     }
-  }
-</style>
+
+    /* Image styles */
+    .image-row {
+      display: flex;
+      gap: var(--spacing-medium);
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #2E7D32;
+      padding: var(--spacing-medium);
+      border-radius: var(--border-radius-medium);
+    }
+
+    /* General image styling */
+    img {
+      max-width: 100%;
+      max-height: var(--max-img-height);
+      height: auto;
+      border-radius: var(--border-radius-medium);
+    }
+
+    /* Floating buttons container styles */
+    #float-buttons {
+      position: fixed;
+      top: 50%;
+      right: 1.25rem;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      z-index: 9999;
+    }
+
+    #float-buttons button {
+      padding: 0.5em 1em;
+      font-size: 0.9em;
+      cursor: pointer;
+      border: none;
+      border-radius: var(--border-radius-small);
+      background-color: #555;
+      color: #fff;
+      transition: background-color 0.3s;
+    }
+
+    #float-buttons button:hover {
+      background-color: #777;
+    }
+
+    /* Footer style */
+    footer {
+      background-color: rgb(59, 57, 57);
+      color: white;
+      text-align: center;
+      padding: var(--spacing-small);
+      margin-top: var(--spacing-large);
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    /* Media queries */
+    @media(max-width: 768px) {
+      .side-by-side {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text-box {
+        min-width: 80%;
+      }
+    }
+
+    @media(max-width: 1024px) and (min-width: 769px) {
+      body {
+        padding: 0 2rem;
+      }
+
+      .text-box {
+        min-width: 45%;
+      }
+    }
+
+    @media(max-width: 480px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1);
+      }
+
+      .side-by-side {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text-box {
+        min-width: 80%;
+      }
+
+      .image-row {
+        flex-direction: column;
+      }
+    }
+
+    @media(min-width: 1200px) {
+      body {
+        max-width: none;
+        margin: 0;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .text-box {
+        font-size: 1.3em;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Navigation -->
   <nav>
     <a href="index.html">Intro</a>
     <a href="nextpage.html">Manga/Anime</a>
@@ -207,16 +222,27 @@
   <div class="side-by-side">
     <div class="text-box">
       <h1>What do I Collect?</h1>
-      <p>I love collecting old things, new things, anythings! I don't have a set list of things I collect. It could be car parts, art, books, clothes, games, and the list goes on. (I even have demo songs from multiple different artists that weren't released.) Might be a little bit of a hoarder, but I don't collect trash at least.</p>
-      <p>Some of my favorite things in my miscellaneous collection have got to be either my old car parts or my "scrap." (It's not really scrap, I just don't know what to class it under.) It's bottlecaps and things like that.</p>
+      <p>I love collecting old things, new things, anythings! I don't have a set list of things I collect. It could be
+        car parts, art, books, clothes, games, and the list goes on. (I even have demo songs from multiple different
+        artists that weren't released.) Might be a little bit of a hoarder, but I don't collect trash at least.</p>
+      <p>Some of my favorite things in my miscellaneous collection have got to be either my old car parts or my "scrap."
+        (It's not really scrap, I just don't know what to class it under.) It's bottlecaps and things like that.</p>
     </div>
     <div class="text-box">
       <h1>Metal Detecting</h1>
-      <p>I enjoy going out every once in a while to go metal detecting. Metal detecting is where I find most of my cool stuff and is actually where I found those car bits. If you want to metal detect in a state park, you have to fill out forms and talk to the rangers for permission, but once you get past that, it's smooth sailing. Some of my favorite pieces came from my local elementary school. The school was built in the 1800s, and when I went metal detecting there, I found old metal desk parts, silverware, and lead. (Yikes.)</p>
-      <p>It's pretty much a must to wear gloves and get your tetanus shots, as you're dealing with potentially rusty and sharp metal. Also, bringing tools is a must. (Duh.) A shovel, a “wand,” and a place to put your treasures or trash into. These are just the basic tools. (A wand is just a pinpointing tool so you can find the metal easier after you've dug the hole.)</p>
+      <p>I enjoy going out every once in a while to go metal detecting. Metal detecting is where I find most of my cool
+        stuff and is actually where I found those car bits. If you want to metal detect in a state park, you have to
+        fill out forms and talk to the rangers for permission, but once you get past that, it's smooth sailing. Some of
+        my favorite pieces came from my local elementary school. The school was built in the 1800s, and when I went
+        metal detecting there, I found old metal desk parts, silverware, and lead. (Yikes.)</p>
+      <p>It's pretty much a must to wear gloves and get your tetanus shots, as you're dealing with potentially rusty and
+        sharp metal. Also, bringing tools is a must. (Duh.) A shovel, a “wand,” and a place to put your treasures or
+        trash into. These are just the basic tools. (A wand is just a pinpointing tool so you can find the metal easier
+        after you've dug the hole.)</p>
     </div>
   </div>
 
+  <!-- Images -->
   <div class="image-row">
     <img src="WSScreen/CarParts.png" alt="Collection" />
     <img src="WSScreen/AT&T.png" alt="Collection" />
@@ -224,14 +250,17 @@
     <img src="WSScreen/Old1.png" alt="Collection" />
     <img src="WSScreen/Old2.png" alt="Collection" />
   </div>
-  
+
+  <!-- Floating Buttons -->
   <div id="float-buttons">
     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
     <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
   </div>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Aidrin Morris</p>
   </footer>
 </body>
+
 </html>
