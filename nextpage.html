@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -107,7 +106,7 @@
       color: white;
     }
 
-    /* Image sizing for all images, override in media queries */
+    /* Image styling */
     img {
       border-radius: 0.5rem;
       display: block;
@@ -117,86 +116,43 @@
     }
 
     /* Max-width classes for images */
-    .wss1 {
-      max-width: 20em;
-    }
-
-    .wss2 {
-      max-width: 30em;
-    }
-
-    .wss3 {
-      max-width: 40em;
-    }
-
-    .NGE {
-      max-width: 20vw;
-    }
-
-    .GitS {
-      max-width: 20vw;
-    }
+    .wss1 { max-width: 20em; }
+    .wss2 { max-width: 30em; }
+    .wss3 { max-width: 40em; }
+    .NGE { max-width: 20vw; }
+    .GitS { max-width: 20vw; }
 
     /* Media queries */
     @media(max-width: 75rem) {
-      body {
-        font-size: 0.95rem;
-      }
+      body { font-size: 0.95rem; }
     }
 
     @media(max-width: 62rem) {
-      body {
-        font-size: 0.9rem;
-      }
-
-      nav {
-        flex-direction: column;
-      }
-
-      img {
-        max-width: 80%;
-      }
-
-      .NGE,
-      .GitS {
-        max-width: 50vw;
-      }
+      body { font-size: 0.9rem; }
+      nav { flex-direction: column; }
+      img { max-width: 80%; }
+      .NGE, .GitS { max-width: 50vw; }
     }
 
     @media(max-width: 48rem) {
-      body {
-        font-size: 0.85rem;
-      }
-
+      body { font-size: 0.85rem; }
       nav {
         flex-direction: column;
         align-items: center;
       }
-
       nav a {
         padding: calc(var(--spacing-small) * 0.75) calc(var(--spacing-medium) * 1);
       }
-
-      img {
-        max-width: 70%;
-      }
-
-      .NGE,
-      .GitS {
-        max-width: 60vw;
-      }
+      img { max-width: 70%; }
+      .NGE, .GitS { max-width: 60vw; }
     }
 
     @media(max-width: 30rem) {
-      body {
-        font-size: 0.8rem;
-      }
+      body { font-size: 0.8rem; }
     }
 
     @media(min-width: 75rem) {
-      body {
-        font-size: 1.1rem;
-      }
+      body { font-size: 1.1rem; }
     }
 
     /* Footer styles */
@@ -206,6 +162,11 @@
       text-align: center;
       padding: var(--spacing-small);
       margin-top: var(--spacing-large);
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
     }
 
     /* Floating buttons styles */
@@ -237,7 +198,6 @@
     }
   </style>
 </head>
-
 <body>
 
   <!-- Navigation -->
@@ -249,7 +209,7 @@
     <a href="nextpage4.html">Music</a>
   </nav>
 
-  <!-- Content Sections -->
+  <!-- Main Content -->
   <div class="content">
 
     <section>
@@ -273,7 +233,6 @@
     <section>
       <h2>Gauna Images</h2>
       <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
-
         <!-- Images -->
         <img src="WSScreen/Screenshot 2025-10-24 170314.png" alt="Gauna Image" class="wss1" />
         <img src="WSScreen/Screenshot 2025-10-24 170406.png" alt="Gauna Image" class="wss2" />
@@ -295,7 +254,7 @@
     </section>
   </div>
 
-  <!-- Floating Buttons always visible on the right -->
+  <!-- Floating Buttons -->
   <div id="float-buttons">
     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
     <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
@@ -307,5 +266,4 @@
   </footer>
 
 </body>
-
 </html>

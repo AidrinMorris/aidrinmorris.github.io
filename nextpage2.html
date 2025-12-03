@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -99,8 +98,8 @@
     }
 
     .white-link {
-  color: white;
-}
+      color: white;
+    }
 
     /* Style for styled boxes around text content */
     .text-box {
@@ -127,67 +126,14 @@
     }
 
     /* Max-width classes for images */
-    .wss1 {
-      max-width: 20em;
-    }
-
-    .wss2 {
-      max-width: 30em;
-    }
-
-    .wss3 {
-      max-width: 40em;
-    }
-
-    .NGE {
-      max-width: 20vw;
-    }
-
-    .GitS {
-      max-width: 20vw;
-    }
-
-    /* Footer style */
-    footer {
-      background-color: rgb(59, 57, 57);
-      color: #fff;
-      text-align: center;
-      padding: var(--spacing-small);
-      margin-top: var(--spacing-large);
-      width: 100% !important;
-    }
-
-    /* Floating buttons container styles */
-    #float-buttons {
-      position: fixed;
-      top: 50%;
-      right: 1.25rem;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 0.5em;
-      z-index: 9999;
-      opacity: 0.7;
-    }
-
-    #float-buttons button {
-      padding: 0.5em 1em;
-      font-size: 0.9em;
-      cursor: pointer;
-      border: none;
-      border-radius: var(--border-radius-small);
-      background-color: #555;
-      color: #fff;
-      transition: background-color 0.3s;
-    }
-
-    #float-buttons button:hover {
-      background-color: #777;
-    }
+    .wss1 { max-width: 20em; }
+    .wss2 { max-width: 30em; }
+    .wss3 { max-width: 40em; }
+    .NGE { max-width: 20vw; }
+    .GitS { max-width: 20vw; }
 
     /* Media Queries */
     @media(max-width: 48rem) {
-
       nav {
         flex-direction: column;
         align-items: center;
@@ -234,9 +180,46 @@
         font-size: 1.3em;
       }
     }
+
+    /* Footer style */
+    footer {
+      background-color: rgb(59, 57, 57);
+      color: #fff;
+      text-align: center;
+      padding: var(--spacing-small);
+      margin-top: var(--spacing-large);
+      width: 100% !important;
+    }
+
+    /* Floating buttons container styles */
+    #float-buttons {
+      position: fixed;
+      top: 50%;
+      right: 1.25rem;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      z-index: 9999;
+      opacity: 0.7;
+    }
+
+    #float-buttons button {
+      padding: 0.5em 1em;
+      font-size: 0.9em;
+      cursor: pointer;
+      border: none;
+      border-radius: var(--border-radius-small);
+      background-color: #555;
+      color: #fff;
+      transition: background-color 0.3s;
+    }
+
+    #float-buttons button:hover {
+      background-color: #777;
+    }
   </style>
 </head>
-
 <body>
   <!-- Navigation -->
   <nav>
@@ -247,11 +230,10 @@
     <a href="nextpage4.html">Music</a>
   </nav>
 
-  <!-- Main content -->
+  <!-- Main Content -->
   <div class="content">
     <section>
       <h2>My MTG &amp; D&amp;D</h2>
-
       <div class="side-by-side" style="flex-wrap: wrap; justify-content: center;">
         <div class="text-box" style="background-color:#2E7D32;">
           <h1>Magic: The Gathering and D&amp;D</h1>
@@ -272,12 +254,14 @@
             Universes Beyond stuff.</p>
           <p>My favorite "villains" from the main story has got to be the Phyrexians. I'm trying to collect every
             legendary card from Mirrodin, New Phyrexian, and The Fall. More information on the Phyrexians. Website Link:
-            <a href="https://mtg.fandom.com/wiki/Phyrexia" target="_blank" rel="noopener noreferrer" class="white-link"><strong>Phyrexian
-                Information</strong></a> Shout out to the Eldrazi's!</p>
+            <a href="https://mtg.fandom.com/wiki/Phyrexia" target="_blank" rel="noopener noreferrer"
+              class="white-link"><strong>Phyrexian
+                Information</strong></a> Shout out to the Eldrazi's!
+          </p>
           <p>If you want more information on the formats you can go to the official <strong>Wizards of the
               Coast</strong> website.</p>
-          <p>Website Link: <a href="https://magic.wizards.com/en/formats" target="_blank"
-              rel="noopener noreferrer" class="white-link"><strong>Wizards of the Coast format information</strong></a></p>
+          <p>Website Link: <a href="https://magic.wizards.com/en/formats" target="_blank" rel="noopener noreferrer"
+              class="white-link"><strong>Wizards of the Coast format information</strong></a></p>
         </div>
         <div class="text-box" style="background-color:#2E7D32;">
           <h1>My favorite <strong>D&amp;D</strong> character</h1>
@@ -299,7 +283,6 @@
             but I'm planning on writing out her entire story eventually.</p>
         </div>
       </div>
-
       <!-- Images -->
       <img src="WSScreen/MyMTG.png" alt="WotC" class="responsive-img" />
       <img src="WSScreen/DnD.png" alt="WotC" class="responsive-img" />
@@ -313,7 +296,8 @@
       <img src="WSScreen/MagicCard.png" alt="WotC" class="responsive-img" />
     </section>
   </div>
-  <!-- Floating buttons -->
+
+  <!-- Floating Buttons -->
   <div id="float-buttons">
     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go to Top</button>
     <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });">Go to Bottom</button>
@@ -324,5 +308,4 @@
     <p>&copy; 2025 Aidrin Morris</p>
   </footer>
 </body>
-
 </html>
