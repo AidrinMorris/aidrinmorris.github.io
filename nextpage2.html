@@ -26,6 +26,10 @@
       --max-img-height: 15rem;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     /* Layout styles */
     body {
       display: flex;
@@ -177,7 +181,7 @@
     }
 
     /* Media Queries */
-    @media(max-width: 768px) {
+    @media(max-width: 48rem) {
 
       nav {
         flex-direction: column;
@@ -202,7 +206,7 @@
       }
     }
 
-    @media(max-width: 480px) {
+    @media(max-width: 30rem) {
       body {
         font-size: 0.8rem;
       }
@@ -216,7 +220,7 @@
       }
     }
 
-    @media(min-width: 1200px) {
+    @media(min-width: 75rem) {
       body {
         font-size: 1.1rem;
       }

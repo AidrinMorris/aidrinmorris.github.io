@@ -24,6 +24,10 @@
       --font-size-heading: 1.5rem;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+    
     /* Layout styles */
     body {
       display: flex;
@@ -102,7 +106,7 @@
     }
 
     /* Media queries */
-    @media(max-width: 768px) {
+    @media(max-width: 48rem) {
       .main-content {
         grid-template-columns: 1fr;
         width: 70%;
@@ -173,7 +177,7 @@
     }
 
     /* Other media queries */
-    @media(max-width: 480px) {
+    @media(max-width: 30rem) {
       body {
         font-size: 0.8rem;
       }
@@ -190,7 +194,7 @@
       }
     }
 
-    @media(min-width: 1200px) {
+    @media(min-width: 75rem) {
       body {
         font-size: 1.2rem;
       }
@@ -241,7 +245,7 @@
     /* Additional style for a box around text sections */
     .text-box {
       background-color: #5e5d5d;
-      border: 2px solid #333;
+      border: 0.125rem solid #333;
       border-radius: var(--border-radius-large);
       padding: 1rem;
       margin-bottom: 1em;
