@@ -226,13 +226,6 @@
       gap: 0.5em;
       z-index: 9999;
       opacity: 0.7;
-      transition: opacity 0.3s, visibility 0.3s;
-    }
-
-    #float-buttons.hidden {
-        opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
     }
 
     #float-buttons button {
@@ -348,18 +341,6 @@
     <p>&copy; 2025 Aidrin Morris | <a href="https://github.com/aidrinmorris" target="_blank"><i
           class="fab fa-github"></i> My GitHub</a></p>
   </footer>
-
-  <script>
-  let hideTimeout;
-  window.addEventListener('scroll', () => {
-    const floatButtons = document.getElementById('float-buttons');
-    floatButtons.classList.remove('hidden');
-    clearTimeout(hideTimeout);
-    hideTimeout = setTimeout(() => {
-      floatButtons.classList.add('hidden');
-    }, 2000);
-  });
-</script>
 
 </body>
 
